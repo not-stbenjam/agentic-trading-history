@@ -12,10 +12,38 @@
         <p class="eyebrow">Public-safe moonshot ledger</p>
         <h1>Agentic Trading History</h1>
       </div>
-      <div class="asof" id="asOf"></div>
+      <div class="header-actions">
+        <div class="asof" id="asOf"></div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode"></button>
+      </div>
     </header>
 
     <main>
+      <section class="hero-grid">
+        <article class="panel hero-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Performance path</p>
+              <h2>Account Value</h2>
+            </div>
+            <strong id="heroReturn"></strong>
+          </div>
+          <canvas id="equityChart" height="260" aria-label="Account value chart"></canvas>
+        </article>
+
+        <article class="panel hero-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Open book</p>
+              <h2>Allocation</h2>
+            </div>
+            <strong id="largestPosition"></strong>
+          </div>
+          <canvas id="allocationChart" height="260" aria-label="Portfolio allocation chart"></canvas>
+          <div class="legend" id="allocationLegend"></div>
+        </article>
+      </section>
+
       <section class="metrics" aria-label="Portfolio summary">
         <article>
           <span>Account Value</span>
@@ -33,6 +61,21 @@
           <span>Total P/L</span>
           <strong id="totalProfit"></strong>
         </article>
+        <article>
+          <span>Cash</span>
+          <strong id="cash"></strong>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Profit engine</p>
+            <h2>Realized vs. Unrealized</h2>
+          </div>
+          <p class="note">SUNE realized gains currently carry most of the sleeve.</p>
+        </div>
+        <canvas id="profitChart" height="180" aria-label="Profit breakdown chart"></canvas>
       </section>
 
       <section class="layout">

@@ -4,6 +4,13 @@ window.TRADE_HISTORY = {
   accountValue: 185.5319,
   exposureCost: 175.61,
   realizedProfit: 24.12,
+  snapshots: [
+    { date: "2026-06-08T09:30:00-04:00", label: "Start", value: 155, exposure: 0 },
+    { date: "2026-06-08T15:31:00-04:00", label: "Jun 8", value: 185.745, exposure: 54.57 },
+    { date: "2026-06-09T15:31:00-04:00", label: "Jun 9", value: 179.0062, exposure: 104.07 },
+    { date: "2026-06-10T15:31:00-04:00", label: "Jun 10", value: 179, exposure: 151.95 },
+    { date: "2026-06-11T15:31:00-04:00", label: "Jun 11", value: 185.5319, exposure: 175.61 }
+  ],
   policy: {
     perTicketCap: 50,
     exposureCap: 1000,
