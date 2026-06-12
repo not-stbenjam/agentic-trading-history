@@ -1,8 +1,8 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-11T15:31:00-04:00",
-  "cash": 3.51,
-  "accountValue": 185.5319,
-  "exposureCost": 175.61,
+  "asOf": "2026-06-12T15:31:00-04:00",
+  "cash": 648.87,
+  "accountValue": 920.045,
+  "exposureCost": 273.89,
   "realizedProfit": 24.12,
   "snapshots": [
     {
@@ -32,15 +32,16 @@ window.TRADE_HISTORY = {
     {
       "date": "2026-06-11T15:31:00-04:00",
       "label": "Jun 11",
-      "value": 185.5319,
-      "exposure": 175.61
+      "value": 920.045,
+      "exposure": 273.89
     }
   ],
   "policy": {
-    "perTicketCap": 50,
+    "perTicketCap": 100,
     "exposureCap": 1000,
     "rules": [
       "Listed common-stock microcap moonshots only.",
+      "Prefer pre-catalyst, early underreaction, or second-catalyst setups over spent headline spikes.",
       "No averaging down.",
       "Recover principal near 2x when structure supports it.",
       "Sell partials into 3x-5x spikes.",
@@ -54,11 +55,11 @@ window.TRADE_HISTORY = {
       "quantity": 2,
       "averageCost": 2.68,
       "costBasis": 5.36,
-      "lastPrice": 2.6263,
+      "lastPrice": 2.375,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 11 EOD hold/no add. SUNE improved to around $2.626 with a $2.63/$2.64 regular-hours quote, still above the stated ~$2.26 merger-implied range. Principal plus the 3x tier are already sold; keep the 1-share $13.40 GTC sell and 1 loose runner unless regular-hours action breaks the merger-news thesis range or liquidity deteriorates."
+      "plan": "June 12 15:31 hold/no add. Regular-hours last around $2.375 with a $2.36/$2.40 quote versus $2.57 prior close. Principal plus the 3x tier are already sold; keep the 1-share $13.40 GTC sell and 1 loose runner. Weak but still above the stated ~$2.26 implied merger value, so no forced sell unless the merger-news range breaks or liquidity deteriorates."
     },
     {
       "symbol": "AUUD",
@@ -66,11 +67,11 @@ window.TRADE_HISTORY = {
       "quantity": 37,
       "averageCost": 1.33,
       "costBasis": 49.21,
-      "lastPrice": 1.37,
+      "lastPrice": 1.305,
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 11 EOD hold/no add. AUUD is around $1.37 with a $1.36/$1.38 quote, above entry and prior close. The June 11 McCarthy Finney merger update is constructive, with SEC comments received and July closing expected subject to clearance, Nasdaq approval, and shareholder vote; keep the existing GTC exit ladder and do not add because cash is only about $3.51."
+      "plan": "June 12 15:31 hold/no add. Regular-hours last around $1.305 with a $1.30/$1.31 quote versus $1.37 prior close and about $1.33 entry. June 11 merger-process update remains constructive; keep the existing GTC exit ladder. No add because averaging down is prohibited."
     },
     {
       "symbol": "ZENA",
@@ -78,11 +79,11 @@ window.TRADE_HISTORY = {
       "quantity": 34,
       "averageCost": 1.4559,
       "costBasis": 49.5,
-      "lastPrice": 1.555,
+      "lastPrice": 1.41,
       "realizedProfit": 0,
       "thesis": "Russell 3000 inclusion effective June 29, listed common-stock structure, tight quote, and possible drone/AI retail attention if index-inclusion flow builds.",
       "invalidation": "Review or sell if volume stays ordinary, the Russell addition fails to attract momentum, spread/liquidity deteriorate, or the move turns into low-quality promotion.",
-      "plan": "June 11 EOD hold/no add. Russell 3000 catalyst remains intact; regular-hours quote is around $1.55/$1.56 versus $1.4559 entry. Keep the principal-recovery, 3x, and 5x reducing sell limits."
+      "plan": "June 12 15:31 hold/no add. Russell 3000 catalyst remains intact for the June 29 reconstitution; regular-hours last around $1.41 with a $1.41/$1.42 quote, slightly below entry. Keep the principal-recovery, 3x, and 5x sell ladder; no add because averaging down is prohibited."
     },
     {
       "symbol": "XOS",
@@ -90,11 +91,11 @@ window.TRADE_HISTORY = {
       "quantity": 12,
       "averageCost": 3.9899,
       "costBasis": 47.88,
-      "lastPrice": 4.1,
+      "lastPrice": 3.58,
       "realizedProfit": 0,
       "thesis": "Real operating catalyst: follow-on order worth about $3M for 12 Xos Hub mobile energy storage and charging units from a leading autonomous fleet operator.",
       "invalidation": "Review or sell if the order-news bid fades below the opening range, volume dries up, spread widens materially, or the market treats the catalyst as exhausted continuation.",
-      "plan": "June 11 EOD hold/no add. XOS is around $4.10 with a $4.09/$4.19 quote versus the $3.9899 fill and $3.66 prior close. The $3M autonomous-fleet charging order catalyst is intact; no sell because the bid recovered and no add because the ticket is already near the $50 cap."
+      "plan": "June 12 15:31 hold/no add, still on close watch. Regular-hours last around $3.58 with a $3.55/$3.63 quote versus $4.27 prior close and $3.9899 fill. The $3M Xos Hub follow-on order thesis has not been invalidated by a fresh adverse headline, but the order-news bid is weak; sell/review if it loses liquidity or confirms that the catalyst is exhausted."
     },
     {
       "symbol": "VRA",
@@ -102,11 +103,23 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.4299,
+      "lastPrice": 3.7,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 11 EOD hold/no add. VRA is around $3.43 with a tight $3.42/$3.43 quote, above the $3.3799 fill and $3.18 prior close. Earnings-surprise thesis remains intact; no add with only about $3.51 buying power and no averaging down."
+      "plan": "June 12 15:31 hold/no add. Regular-hours last around $3.70 with a $3.70/$3.72 quote, still above the $3.3799 fill after the earnings-surprise continuation. No add; monitor for principal-recovery setup later."
+    },
+    {
+      "symbol": "SPRO",
+      "company": "SPRO",
+      "quantity": 36,
+      "averageCost": 2.7299,
+      "costBasis": 98.28,
+      "lastPrice": 2.815,
+      "realizedProfit": 0,
+      "thesis": "Spero is a listed U.S. common-stock biotech with a GSK-partnered tebipenem HBr NDA under FDA review and a June 18, 2026 PDUFA target action date. The opening quote tightened near the prior close instead of turning into a vertical chase.",
+      "invalidation": "Sell/review if new FDA/manufacturing/cash-risk headlines impair the PDUFA thesis, regular-hours liquidity deteriorates, the setup becomes a crowded binary run-up with poor exit quality, or the PDUFA is delayed/negative.",
+      "plan": "June 12 15:31 hold/no add. Regular-hours last around $2.815 with a $2.81/$2.82 quote versus $2.7299 fill and $2.70 prior close. PDUFA-run-up thesis remains clean and spread is tight; no add because the first $98 ticket already uses the intended autonomous size."
     }
   ],
   "trades": [
@@ -177,6 +190,17 @@ window.TRADE_HISTORY = {
       "note": "Autonomous buy after $3M Xos Hub follow-on order catalyst."
     },
     {
+      "date": "2026-06-11T09:48:25-04:00",
+      "symbol": "SPRO",
+      "side": "BUY",
+      "quantity": 36,
+      "price": 2.7299,
+      "amount": -98.28,
+      "fees": 0,
+      "realizedProfit": 0,
+      "note": "Public-safe trade entry parsed from the trading journal."
+    },
+    {
       "date": "2026-06-11T09:48:58-04:00",
       "symbol": "VRA",
       "side": "BUY",
@@ -190,40 +214,10 @@ window.TRADE_HISTORY = {
   ],
   "actions": [
     {
-      "date": "2026-06-10T15:31:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "SUNE hold/no add. Quote at check: last $2.84, bid/ask $2.83/$2.85, previous close $3.56, versus $2.68 entry. The merger runner is fading toward the stated ~$2.26 implied merger value, so the thesis is weaker than this morning, but no fre..."
-    },
-    {
-      "date": "2026-06-10T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "AUUD hold/no add. Quote at check: last $1.2605, bid/ask $1.26/$1.27, previous close $1.30, versus ~$1.33 entry. The financing/S-4/Thramann-McCarthy Finney merger thesis has no fresh adverse update; existing GTC ladder remains in place. N..."
-    },
-    {
-      "date": "2026-06-10T15:31:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "15:31 end-of-day check for Agentic account. Account snapshot: total value about $179.00, equity value $151.83, cash/buying power $27.17, open cost exposure about $151.95. The cron payload used the stricter $200 total-exposure placement g..."
-    },
-    {
-      "date": "2026-06-10T15:31:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "SUNE hold/no add. Quote at check: last $2.64, bid/ask $2.64/$2.65, previous close $3.56, versus $2.68 entry and the stated merger-implied value around $2.26. This is a hard fade and the thesis is weaker, but principal plus the 3x tier ar..."
-    },
-    {
-      "date": "2026-06-11T08:52:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "08:52 premarket scout for Agentic account. Account check: Agentic cash account, total value about $171.38, equity value about $144.21, cash/buying power $27.17, open cost exposure about $151.95 under manual's active $1,000 cap. Open posi..."
-    },
-    {
       "date": "2026-06-11T12:11:00-04:00",
       "symbol": "SUNE",
       "type": "GTC_LIMIT_PLACED",
-      "description": "12:11 midday check for Agentic account. Account snapshot: Agentic cash account, total value about $182.905, equity value about $179.395, cash/buying power $3.51, open cost exposure about $175.61. The cron payload used the stricter $200 t..."
+      "description": "12:11 midday check for Agentic account. Account snapshot: Agentic cash account, total value $918.654, equity value $269.784, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions: 2..."
     },
     {
       "date": "2026-06-11T15:31:00-04:00",
@@ -260,6 +254,36 @@ window.TRADE_HISTORY = {
       "symbol": "AUUD",
       "type": "CATALYST_UPDATE",
       "description": "AUUD hold/no add. Quote at check: last $1.37, bid/ask $1.36/$1.38, previous close $1.29, versus about $1.3299 entry. Fresh June 11 merger-process update is constructive: Auddia says SEC comments on the S-4 have been received and it expec..."
+    },
+    {
+      "date": "2026-06-11T15:31:00-04:00",
+      "symbol": "AUUD",
+      "type": "CATALYST_UPDATE",
+      "description": "AUUD hold/no add. Premarket last about $1.34, bid/ask $1.30/$1.35, previous close $1.37, versus ~$1.33 entry. The June 11 merger-process update remains constructive, but no add premarket; keep existing GTC exit ladder."
+    },
+    {
+      "date": "2026-06-11T15:31:00-04:00",
+      "symbol": "SUNE",
+      "type": "CATALYST_UPDATE",
+      "description": "Existing position check: SUNE hold/no add around $2.56 with a $2.53/$2.57 quote, still near prior close and above the merger-thesis range with principal plus 3x tier harvested. AUUD hold/no add around $1.34 with a $1.34/$1.35 quote and n..."
+    },
+    {
+      "date": "2026-06-11T15:31:00-04:00",
+      "symbol": "AUUD",
+      "type": "CATALYST_UPDATE",
+      "description": "AUUD hold/no add. Quote at check: last $1.29, bid/ask $1.29/$1.30, previous close $1.37, versus about $1.3299 entry. The June 11 merger-process update remains constructive: SEC comments received, amended S-4 expected, and July closing ta..."
+    },
+    {
+      "date": "2026-06-11T15:31:00-04:00",
+      "symbol": "SUNE",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "15:31 end-of-day check for Agentic account. Account snapshot: Agentic cash account, total value $920.045, equity value $271.175, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions..."
+    },
+    {
+      "date": "2026-06-11T15:31:00-04:00",
+      "symbol": "AUUD",
+      "type": "CATALYST_UPDATE",
+      "description": "AUUD hold/no add. Quote at check: last $1.305, bid/ask $1.30/$1.31, previous close $1.37, versus about $1.3299 entry. The June 11 merger-process update remains constructive and no fresh adverse development surfaced. Existing GTC sell lad..."
     }
   ],
   "openOrders": [
