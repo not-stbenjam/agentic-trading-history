@@ -91,24 +91,39 @@ def parse_journal():
             current_date = heading.group(1)
             continue
 
+        inline_date = re.match(r"-\s+(\d{4}-\d{2}-\d{2})\b", line)
+        if inline_date:
+            current_date = inline_date.group(1)
+
         if "Initial account readout" in line:
             amount = re.search(r"\$([0-9.]+)\s+total value", line)
+            cash = re.search(r"\$([0-9.]+)\s+cash/buying power", line)
             if amount:
                 snapshots.append({
                     "date": "2026-06-08T09:30:00-04:00",
                     "label": "Start",
                     "value": float(amount.group(1)),
+                    "cash": float(cash.group(1)) if cash else float(amount.group(1)),
+                    "equity": 0,
                     "exposure": 0,
                 })
 
-        eod = re.search(r"15:31 end-of-day check.*?total value (?:about )?\$([0-9]+(?:\.[0-9]+)?).*?open cost exposure (?:about )?\$([0-9]+(?:\.[0-9]+)?)", line)
+        eod = re.search(
+            r"15:31 end-of-day check.*?total value (?:about )?\$([0-9]+(?:\.[0-9]+)?).*?"
+            r"equity value (?:about )?\$([0-9]+(?:\.[0-9]+)?).*?"
+            r"(?:cash/buying power|cash) (?:about )?\$([0-9]+(?:\.[0-9]+)?).*?"
+            r"open cost exposure (?:about )?\$([0-9]+(?:\.[0-9]+)?)",
+            line,
+        )
         if eod and current_date:
             label_dt = datetime.fromisoformat(f"{current_date}T12:00:00-04:00")
             snapshots.append({
                 "date": f"{current_date}T15:31:00-04:00",
                 "label": label_dt.strftime("%b %-d"),
                 "value": parse_amount(eod.group(1)),
-                "exposure": parse_amount(eod.group(2)),
+                "equity": parse_amount(eod.group(2)),
+                "cash": parse_amount(eod.group(3)),
+                "exposure": parse_amount(eod.group(4)),
             })
 
         buy = re.search(
@@ -172,9 +187,35 @@ def parse_journal():
     for item in snapshots:
         deduped[item["date"]] = item
     snapshots = sorted(deduped.values(), key=lambda item: item["date"])
+    snapshots = add_performance_fields(snapshots)
     trades = sorted(trades, key=lambda item: item["date"])
     actions = sorted(actions, key=lambda item: item["date"])
     return trades, actions[-12:], snapshots
+
+
+def add_performance_fields(snapshots):
+    if not snapshots:
+        return snapshots
+
+    capital_added = snapshots[0]["value"]
+    previous = snapshots[0]
+    enriched = []
+
+    for index, item in enumerate(snapshots):
+        if index > 0:
+            cash_change = item.get("cash", 0) - previous.get("cash", 0)
+            value_change = item["value"] - previous["value"]
+            exposure_change = item.get("exposure", 0) - previous.get("exposure", 0)
+            if cash_change > 100 and value_change > 100:
+                # The deposit may be partly spent before the next EOD snapshot.
+                capital_added += cash_change + max(0, exposure_change)
+
+        item["capitalAdded"] = round(capital_added, 2)
+        item["tradingPnl"] = round(item["value"] - capital_added, 2)
+        previous = item
+        enriched.append(item)
+
+    return enriched
 
 
 def buy_note(symbol):
@@ -290,10 +331,11 @@ def main():
         "realizedProfit": realized,
         "snapshots": snapshots,
         "policy": {
-            "perTicketCap": 50,
-            "exposureCap": 1000,
+            "perTicketCap": state["settings"]["maxAutonomousBuyDollars"],
+            "exposureCap": state["settings"]["maxTotalMoonshotExposureDollars"],
             "rules": [
                 "Listed common-stock microcap moonshots only.",
+                "Prefer pre-catalyst, early underreaction, or second-catalyst setups over spent headline spikes.",
                 "No averaging down.",
                 "Recover principal near 2x when structure supports it.",
                 "Sell partials into 3x-5x spikes.",

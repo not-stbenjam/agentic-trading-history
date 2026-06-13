@@ -198,6 +198,15 @@ canvas {
   max-width: 100%;
 }
 
+#equityChart,
+#allocationChart {
+  height: 260px;
+}
+
+#profitChart {
+  height: 180px;
+}
+
 .legend {
   display: flex;
   flex-wrap: wrap;
@@ -496,16 +505,17 @@ tbody tr:hover {
 
 @media (max-width: 560px) {
   main {
-    padding-inline: 12px;
+    padding: 14px 10px 38px;
   }
 
   .topbar {
-    padding-inline: 12px;
+    padding: 18px 10px 14px;
   }
 
   .panel,
   .metrics article {
-    padding: 14px;
+    padding: 12px;
+    box-shadow: 0 10px 24px rgba(24, 34, 29, 0.08);
   }
 
   .metrics,
@@ -514,6 +524,34 @@ tbody tr:hover {
   }
 
   .hero-panel {
-    min-height: 320px;
+    min-height: 0;
+  }
+
+  .hero-grid,
+  .layout,
+  .metrics,
+  .holdings,
+  .timeline,
+  .orders {
+    gap: 10px;
+  }
+
+  .section-head {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .section-head strong {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  #equityChart,
+  #allocationChart {
+    height: 220px;
+  }
+
+  #profitChart {
+    height: 160px;
   }
 }

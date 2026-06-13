@@ -24,8 +24,7 @@ const css = (name) => getComputedStyle(document.documentElement).getPropertyValu
 const marketValue = data.holdings.reduce((sum, h) => sum + h.quantity * h.lastPrice, 0);
 const unrealizedProfit = data.holdings.reduce((sum, h) => sum + (h.quantity * h.lastPrice - h.costBasis), 0);
 const totalProfit = data.realizedProfit + unrealizedProfit;
-const startValue = data.snapshots[0].value;
-const totalReturn = ((data.accountValue - startValue) / startValue) * 100;
+const totalReturn = data.exposureCost ? (totalProfit / data.exposureCost) * 100 : 0;
 const largest = data.holdings
   .map((h) => ({ ...h, marketValue: h.quantity * h.lastPrice }))
   .sort((a, b) => b.marketValue - a.marketValue)[0];
@@ -55,7 +54,7 @@ document.querySelector("#marketValue").textContent = money(marketValue);
 document.querySelector("#cash").textContent = money(data.cash);
 document.querySelector("#totalProfit").textContent = money(totalProfit);
 document.querySelector("#totalProfit").className = totalProfit >= 0 ? "gain" : "loss";
-document.querySelector("#heroReturn").textContent = pct(totalReturn);
+document.querySelector("#heroReturn").textContent = `${money(totalProfit)} · ${pct(totalReturn)}`;
 document.querySelector("#largestPosition").textContent = `${largest.symbol} ${money(largest.marketValue)}`;
 document.querySelector("#rules").innerHTML = data.policy.rules.map((rule) => `<li>${rule}</li>`).join("");
 
@@ -147,20 +146,22 @@ function setupCanvas(canvas) {
   const dpr = window.devicePixelRatio || 1;
   const rect = canvas.getBoundingClientRect();
   canvas.width = Math.round(rect.width * dpr);
-  canvas.height = Math.round(Number(canvas.getAttribute("height")) * dpr);
+  canvas.height = Math.round(rect.height * dpr);
   const ctx = canvas.getContext("2d");
   ctx.scale(dpr, dpr);
-  return { ctx, width: rect.width, height: Number(canvas.getAttribute("height")) };
+  return { ctx, width: rect.width, height: rect.height };
 }
 
 function drawLineChart() {
   const canvas = document.querySelector("#equityChart");
   const { ctx, width, height } = setupCanvas(canvas);
   const pad = 34;
-  const values = data.snapshots.map((item) => item.value);
-  const min = Math.min(...values) - 5;
-  const max = Math.max(...values) + 5;
-  const xFor = (index) => pad + (index / (values.length - 1)) * (width - pad * 2);
+  const values = data.snapshots.map((item) => item.tradingPnl ?? item.value);
+  const min = Math.min(...values, 0) - 5;
+  const max = Math.max(...values, 0) + 5;
+  const xFor = (index) => values.length === 1
+    ? width / 2
+    : pad + (index / (values.length - 1)) * (width - pad * 2);
   const yFor = (value) => height - pad - ((value - min) / (max - min)) * (height - pad * 2);
 
   ctx.clearRect(0, 0, width, height);
@@ -168,6 +169,7 @@ function drawLineChart() {
   ctx.lineWidth = 1;
   ctx.font = "12px Inter, sans-serif";
   ctx.fillStyle = css("--soft");
+  ctx.textAlign = "left";
 
   for (let i = 0; i < 4; i += 1) {
     const y = pad + i * ((height - pad * 2) / 3);
@@ -176,6 +178,14 @@ function drawLineChart() {
     ctx.lineTo(width - pad, y);
     ctx.stroke();
   }
+
+  const zeroY = yFor(0);
+  ctx.beginPath();
+  ctx.moveTo(pad, zeroY);
+  ctx.lineTo(width - pad, zeroY);
+  ctx.strokeStyle = css("--soft");
+  ctx.lineWidth = 1;
+  ctx.stroke();
 
   ctx.beginPath();
   values.forEach((value, index) => {

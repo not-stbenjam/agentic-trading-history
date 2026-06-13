@@ -9,31 +9,61 @@ window.TRADE_HISTORY = {
       "date": "2026-06-08T09:30:00-04:00",
       "label": "Start",
       "value": 155.0,
-      "exposure": 0
+      "cash": 155.0,
+      "equity": 0,
+      "exposure": 0,
+      "capitalAdded": 155.0,
+      "tradingPnl": 0.0
     },
     {
       "date": "2026-06-08T15:31:00-04:00",
       "label": "Jun 8",
       "value": 185.745,
-      "exposure": 54.57
+      "equity": 61.195,
+      "cash": 124.55,
+      "exposure": 54.57,
+      "capitalAdded": 155.0,
+      "tradingPnl": 30.75
     },
     {
       "date": "2026-06-09T15:31:00-04:00",
       "label": "Jun 9",
       "value": 179.0062,
-      "exposure": 104.07
+      "equity": 103.9562,
+      "cash": 75.05,
+      "exposure": 104.07,
+      "capitalAdded": 155.0,
+      "tradingPnl": 24.01
     },
     {
       "date": "2026-06-10T15:31:00-04:00",
       "label": "Jun 10",
       "value": 179.0,
-      "exposure": 151.95
+      "equity": 151.83,
+      "cash": 27.17,
+      "exposure": 151.95,
+      "capitalAdded": 155.0,
+      "tradingPnl": 24.0
     },
     {
       "date": "2026-06-11T15:31:00-04:00",
       "label": "Jun 11",
+      "value": 185.5319,
+      "equity": 182.0219,
+      "cash": 3.51,
+      "exposure": 175.61,
+      "capitalAdded": 155.0,
+      "tradingPnl": 30.53
+    },
+    {
+      "date": "2026-06-12T15:31:00-04:00",
+      "label": "Jun 12",
       "value": 920.045,
-      "exposure": 273.89
+      "equity": 271.175,
+      "cash": 648.87,
+      "exposure": 273.89,
+      "capitalAdded": 898.64,
+      "tradingPnl": 21.4
     }
   ],
   "policy": {
@@ -190,17 +220,6 @@ window.TRADE_HISTORY = {
       "note": "Autonomous buy after $3M Xos Hub follow-on order catalyst."
     },
     {
-      "date": "2026-06-11T09:48:25-04:00",
-      "symbol": "SPRO",
-      "side": "BUY",
-      "quantity": 36,
-      "price": 2.7299,
-      "amount": -98.28,
-      "fees": 0,
-      "realizedProfit": 0,
-      "note": "Public-safe trade entry parsed from the trading journal."
-    },
-    {
       "date": "2026-06-11T09:48:58-04:00",
       "symbol": "VRA",
       "side": "BUY",
@@ -210,21 +229,20 @@ window.TRADE_HISTORY = {
       "fees": 0,
       "realizedProfit": 0,
       "note": "Autonomous buy after earnings beat and tight cooled opening range."
+    },
+    {
+      "date": "2026-06-12T09:48:25-04:00",
+      "symbol": "SPRO",
+      "side": "BUY",
+      "quantity": 36,
+      "price": 2.7299,
+      "amount": -98.28,
+      "fees": 0,
+      "realizedProfit": 0,
+      "note": "Public-safe trade entry parsed from the trading journal."
     }
   ],
   "actions": [
-    {
-      "date": "2026-06-11T12:11:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "12:11 midday check for Agentic account. Account snapshot: Agentic cash account, total value $918.654, equity value $269.784, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions: 2..."
-    },
-    {
-      "date": "2026-06-11T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "EXIT_LADDER_PLACED",
-      "description": "AUUD hold/no add. Premarket last $1.26, bid/ask $1.27/$1.31, previous close $1.29, versus ~$1.33 entry. No fresh adverse update found on the financing/S-4/Thramann-McCarthy Finney thesis. Keep existing GTC exit ladder; no add because ave..."
-    },
     {
       "date": "2026-06-11T15:31:00-04:00",
       "symbol": "SUNE",
@@ -256,31 +274,43 @@ window.TRADE_HISTORY = {
       "description": "AUUD hold/no add. Quote at check: last $1.37, bid/ask $1.36/$1.38, previous close $1.29, versus about $1.3299 entry. Fresh June 11 merger-process update is constructive: Auddia says SEC comments on the S-4 have been received and it expec..."
     },
     {
-      "date": "2026-06-11T15:31:00-04:00",
+      "date": "2026-06-12T08:52:00-04:00",
+      "symbol": "SUNE",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "08:52 premarket scout for Agentic account. Account check: Agentic cash account, total value $925.8556, equity value $178.7056, cash/buying power $747.15, open cost exposure about $175.61 under manual's active $1,000 cap. Open positions:..."
+    },
+    {
+      "date": "2026-06-12T12:11:00-04:00",
+      "symbol": "SUNE",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "12:11 midday check for Agentic account. Account snapshot: Agentic cash account, total value $918.654, equity value $269.784, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions: 2..."
+    },
+    {
+      "date": "2026-06-12T15:31:00-04:00",
       "symbol": "AUUD",
       "type": "CATALYST_UPDATE",
       "description": "AUUD hold/no add. Premarket last about $1.34, bid/ask $1.30/$1.35, previous close $1.37, versus ~$1.33 entry. The June 11 merger-process update remains constructive, but no add premarket; keep existing GTC exit ladder."
     },
     {
-      "date": "2026-06-11T15:31:00-04:00",
+      "date": "2026-06-12T15:31:00-04:00",
       "symbol": "SUNE",
       "type": "CATALYST_UPDATE",
       "description": "Existing position check: SUNE hold/no add around $2.56 with a $2.53/$2.57 quote, still near prior close and above the merger-thesis range with principal plus 3x tier harvested. AUUD hold/no add around $1.34 with a $1.34/$1.35 quote and n..."
     },
     {
-      "date": "2026-06-11T15:31:00-04:00",
+      "date": "2026-06-12T15:31:00-04:00",
       "symbol": "AUUD",
       "type": "CATALYST_UPDATE",
       "description": "AUUD hold/no add. Quote at check: last $1.29, bid/ask $1.29/$1.30, previous close $1.37, versus about $1.3299 entry. The June 11 merger-process update remains constructive: SEC comments received, amended S-4 expected, and July closing ta..."
     },
     {
-      "date": "2026-06-11T15:31:00-04:00",
+      "date": "2026-06-12T15:31:00-04:00",
       "symbol": "SUNE",
       "type": "GTC_LIMIT_PLACED",
       "description": "15:31 end-of-day check for Agentic account. Account snapshot: Agentic cash account, total value $920.045, equity value $271.175, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions..."
     },
     {
-      "date": "2026-06-11T15:31:00-04:00",
+      "date": "2026-06-12T15:31:00-04:00",
       "symbol": "AUUD",
       "type": "CATALYST_UPDATE",
       "description": "AUUD hold/no add. Quote at check: last $1.305, bid/ask $1.30/$1.31, previous close $1.37, versus about $1.3299 entry. The June 11 merger-process update remains constructive and no fresh adverse development surfaced. Existing GTC sell lad..."
