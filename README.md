@@ -29,4 +29,10 @@ python3 -m http.server 8080
 
 ## Updating Data
 
-Edit `assets/trades.js`. Keep it public-safe: amounts are fine, but do not add account numbers, order IDs, ref IDs, or broker-specific private metadata.
+Edit `/home/stbenjam/.openclaw/workspace/trading/public-trades.json` for filled buys and sells, then run:
+
+```sh
+./scripts/update_and_publish.sh
+```
+
+`assets/trades.js` is generated. Keep structured trade records public-safe: amounts are fine, but do not add account numbers, order IDs, ref IDs, or broker-specific private metadata.
