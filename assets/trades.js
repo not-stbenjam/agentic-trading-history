@@ -3,7 +3,7 @@ window.TRADE_HISTORY = {
   "cash": 738.1,
   "accountValue": 892.5,
   "exposureCost": 151.67,
-  "realizedProfit": 2.66,
+  "realizedProfit": -8.87,
   "snapshots": [
     {
       "date": "2026-06-08T09:30:00-04:00",
@@ -271,6 +271,28 @@ window.TRADE_HISTORY = {
       "note": "Public-safe trade entry parsed from the trading journal."
     },
     {
+      "date": "2026-06-15T12:12:03-04:00",
+      "symbol": "CTM",
+      "side": "SELL",
+      "quantity": 28,
+      "price": 0.7455,
+      "amount": 20.87,
+      "fees": 0,
+      "realizedProfit": -3.25,
+      "note": "Closed after the catalyst follow-through failed."
+    },
+    {
+      "date": "2026-06-15T15:32:24-04:00",
+      "symbol": "XOS",
+      "side": "SELL",
+      "quantity": 12,
+      "price": 3.3001,
+      "amount": 39.6,
+      "fees": 0,
+      "realizedProfit": -8.28,
+      "note": "Closed after the order-news bid weakened and liquidity quality worsened."
+    },
+    {
       "date": "2026-06-16T09:49:01-04:00",
       "symbol": "BEEM",
       "side": "BUY",
@@ -295,28 +317,22 @@ window.TRADE_HISTORY = {
   ],
   "actions": [
     {
-      "date": "2026-06-12T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "CATALYST_UPDATE",
-      "description": "AUUD hold/no add. Quote at check: last $1.29, bid/ask $1.29/$1.30, previous close $1.37, versus about $1.3299 entry. The June 11 merger-process update remains constructive: SEC comments received, amended S-4 expected, and July closing ta..."
-    },
-    {
-      "date": "2026-06-12T15:31:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "15:31 end-of-day check for Agentic account. Account snapshot: Agentic cash account, total value $920.045, equity value $271.175, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions..."
-    },
-    {
-      "date": "2026-06-12T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "CATALYST_UPDATE",
-      "description": "AUUD hold/no add. Quote at check: last $1.305, bid/ask $1.30/$1.31, previous close $1.37, versus about $1.3299 entry. The June 11 merger-process update remains constructive and no fresh adverse development surfaced. Existing GTC sell lad..."
+      "date": "2026-06-15T12:12:00-04:00",
+      "symbol": "CTM",
+      "type": "POSITION_CLOSED",
+      "description": "- CTM mechanical exit executed. Quote at review: last about $0.7485, displayed bid/ask about $0.7455/$0.7485, after a morning entry at $0.8616. The written invalidation was a failure of the $0.83 opening-range base, and CTM was already t..."
     },
     {
       "date": "2026-06-15T15:31:00-04:00",
       "symbol": "AUUD",
       "type": "GTC_LIMIT_PLACED",
       "description": "AUUD hold/no add. Quote around $1.3807, bid/ask $1.38/$1.40, previous close $1.32, versus about $1.3299 entry. The June 11 SEC-comment/amended-S-4/July-closing update remains constructive. Existing GTC ladder stays open; no add because t..."
+    },
+    {
+      "date": "2026-06-15T15:31:00-04:00",
+      "symbol": "CTM",
+      "type": "POSITION_CLOSED",
+      "description": "Placement decision: CTM sold under the written loss rule after clean review. No new buys, adds, or approval-needed orders. manual should be notified because an autonomous exit was placed and filled."
     },
     {
       "date": "2026-06-15T15:31:00-04:00",
@@ -329,6 +345,12 @@ window.TRADE_HISTORY = {
       "symbol": "XOS",
       "type": "POSITION_CLOSED",
       "description": "Placement decision: XOS closed under the written sell/review condition after clean review. No new buys, adds, or approval-needed orders. manual should be notified because an autonomous exit was placed and filled."
+    },
+    {
+      "date": "2026-06-15T15:32:00-04:00",
+      "symbol": "XOS",
+      "type": "POSITION_CLOSED",
+      "description": "- XOS thesis exit executed. Quote at review: last about $3.38, displayed bid/ask about $3.30/$3.44, versus $3.9899 fill and $3.50 prior close. The $3M Xos Hub follow-on order catalyst remained real, but the order-news bid stayed weak int..."
     },
     {
       "date": "2026-06-16T15:31:00-04:00",

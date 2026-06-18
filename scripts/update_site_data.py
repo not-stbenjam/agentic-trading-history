@@ -197,7 +197,32 @@ def parse_journal():
                 "note": closed_sell_note(symbol),
             })
 
-        closed_action = re.search(r"\b[A-Z]+\s+closed\b|Placement decision:\s+closed\b", line)
+        executed_sell = re.search(
+            r"\b([A-Z]+)\s+(?:thesis\s+exit\s+executed|mechanical\s+exit\s+executed)\b.*?filled\s+(\d+)\s+shares\s+at\s+(?:average\s+)?\$([0-9]+(?:\.[0-9]+)?)\s+at\s+([0-9:]+)\s+ET,\s+proceeds\s+(?:about\s+)?\$([0-9]+(?:\.[0-9]+)?).*?Realized\s+(gain|loss)\s+about\s+\$([0-9]+(?:\.[0-9]+)?)",
+            line,
+            re.I,
+        )
+        if executed_sell and current_date:
+            symbol = executed_sell.group(1)
+            qty = int(executed_sell.group(2))
+            trade_price = float(executed_sell.group(3))
+            proceeds = float(executed_sell.group(5))
+            realized = float(executed_sell.group(7))
+            if executed_sell.group(6).lower() == "loss":
+                realized = -realized
+            trades.append({
+                "date": iso_for(current_date, executed_sell.group(4)),
+                "symbol": symbol,
+                "side": "SELL",
+                "quantity": qty,
+                "price": trade_price,
+                "amount": round(proceeds, 2),
+                "fees": 0,
+                "realizedProfit": round(realized, 2),
+                "note": closed_sell_note(symbol),
+            })
+
+        closed_action = re.search(r"\b[A-Z]+\s+(?:closed|thesis\s+exit\s+executed|mechanical\s+exit\s+executed)\b|Placement decision:\s+(?:closed|[A-Z]+\s+closed|[A-Z]+\s+sold)\b", line)
         if current_date and (closed_action or any(marker in line for marker in ["GTC", "exit ladder", "authorized increasing", "merger-process update"])):
             if "order `" in line or "ref_id" in line:
                 safe = scrub(line)
@@ -266,13 +291,14 @@ def closed_sell_note(symbol):
     notes = {
         "SPRO": "Closed after FDA approval arrived early but the stock sold off instead of repricing.",
         "CTM": "Closed after the catalyst follow-through failed.",
+        "XOS": "Closed after the order-news bid weakened and liquidity quality worsened.",
     }
     return notes.get(symbol, "Closed after the written trade thesis broke or failed to continue.")
 
 
 def action_type(text):
     lower = text.lower()
-    if re.search(r"\bclosed\b", lower):
+    if re.search(r"\bclosed\b|\bexit executed\b|\bsold under\b", lower):
         return "POSITION_CLOSED"
     if "authorized increasing" in lower:
         return "MANDATE_UPDATED"
