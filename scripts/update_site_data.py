@@ -44,6 +44,11 @@ THESIS_FALLBACKS = {
         "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
         "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
     },
+    "SPRO": {
+        "company": "Spero Therapeutics",
+        "thesis": "FDA binary setup for GSK-partnered tebipenem HBr, entered near the prior close ahead of the June 18 PDUFA target action date.",
+        "invalidation": "Review or sell if the FDA event is delayed, negative, already fully discounted, or the post-event reaction fails to support a continuing runner thesis.",
+    },
 }
 
 
@@ -167,15 +172,42 @@ def parse_journal():
                 "note": "Reducing sale from the exit ladder.",
             })
 
-        if current_date and any(marker in line for marker in ["GTC", "exit ladder", "authorized increasing", "merger-process update"]):
+        closed_sell = re.search(
+            r"\b([A-Z]+)\s+closed\b.*?filled\s+(\d+)\s+shares\s+at\s+(?:average\s+)?\$([0-9]+(?:\.[0-9]+)?)\s+at\s+([0-9:]+)\s+ET\.\s+Proceeds\s+(?:about\s+)?\$([0-9]+(?:\.[0-9]+)?).*?realized\s+(gain|loss)\s+about\s+\$([0-9]+(?:\.[0-9]+)?)",
+            line,
+            re.I,
+        )
+        if closed_sell and current_date:
+            symbol = closed_sell.group(1)
+            qty = int(closed_sell.group(2))
+            trade_price = float(closed_sell.group(3))
+            proceeds = float(closed_sell.group(5))
+            realized = float(closed_sell.group(7))
+            if closed_sell.group(6).lower() == "loss":
+                realized = -realized
+            trades.append({
+                "date": iso_for(current_date, closed_sell.group(4)),
+                "symbol": symbol,
+                "side": "SELL",
+                "quantity": qty,
+                "price": trade_price,
+                "amount": round(proceeds, 2),
+                "fees": 0,
+                "realizedProfit": round(realized, 2),
+                "note": closed_sell_note(symbol),
+            })
+
+        closed_action = re.search(r"\b[A-Z]+\s+closed\b|Placement decision:\s+closed\b", line)
+        if current_date and (closed_action or any(marker in line for marker in ["GTC", "exit ladder", "authorized increasing", "merger-process update"])):
             if "order `" in line or "ref_id" in line:
                 safe = scrub(line)
             else:
                 safe = scrub(line.lstrip("- "))
-            if "placed" in safe.lower() or "authorized" in safe.lower() or "update" in safe.lower():
+            if "placed" in safe.lower() or "authorized" in safe.lower() or "update" in safe.lower() or closed_action:
                 time_match = re.match(r"-?\s*([0-9]{2}:[0-9]{2})(?::[0-9]{2})?", line)
-                action_time = time_match.group(1) if time_match else "15:31"
-                symbol_match = re.search(r"\b(SUNE|AUUD|ZENA|XOS|VRA|PORTFOLIO)\b", safe)
+                fill_time = re.search(r"\bat\s+([0-9]{2}:[0-9]{2})(?::[0-9]{2})?\s+ET\b", line)
+                action_time = fill_time.group(1) if fill_time else (time_match.group(1) if time_match else "15:31")
+                symbol_match = re.search(r"\b(SUNE|AUUD|ZENA|XOS|VRA|SPRO|BEEM|CTM|PORTFOLIO)\b", safe)
                 actions.append({
                     "date": iso_for(current_date, action_time),
                     "symbol": symbol_match.group(1) if symbol_match else "PORTFOLIO",
@@ -225,12 +257,23 @@ def buy_note(symbol):
         "ZENA": "Manually requested buy after Russell 3000 inclusion catalyst.",
         "XOS": "Autonomous buy after $3M Xos Hub follow-on order catalyst.",
         "VRA": "Autonomous buy after earnings beat and tight cooled opening range.",
+        "SPRO": "Autonomous buy ahead of the FDA PDUFA binary event.",
     }
     return notes.get(symbol, "Public-safe trade entry parsed from the trading journal.")
 
 
+def closed_sell_note(symbol):
+    notes = {
+        "SPRO": "Closed after FDA approval arrived early but the stock sold off instead of repricing.",
+        "CTM": "Closed after the catalyst follow-through failed.",
+    }
+    return notes.get(symbol, "Closed after the written trade thesis broke or failed to continue.")
+
+
 def action_type(text):
     lower = text.lower()
+    if re.search(r"\bclosed\b", lower):
+        return "POSITION_CLOSED"
     if "authorized increasing" in lower:
         return "MANDATE_UPDATED"
     if "merger-process update" in lower or "fresh june 11" in lower:

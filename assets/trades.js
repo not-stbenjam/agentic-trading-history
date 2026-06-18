@@ -3,7 +3,7 @@ window.TRADE_HISTORY = {
   "cash": 738.1,
   "accountValue": 892.5,
   "exposureCost": 151.67,
-  "realizedProfit": 24.12,
+  "realizedProfit": 2.66,
   "snapshots": [
     {
       "date": "2026-06-08T09:30:00-04:00",
@@ -257,7 +257,7 @@ window.TRADE_HISTORY = {
       "amount": -98.28,
       "fees": 0,
       "realizedProfit": 0,
-      "note": "Public-safe trade entry parsed from the trading journal."
+      "note": "Autonomous buy ahead of the FDA PDUFA binary event."
     },
     {
       "date": "2026-06-15T09:48:27-04:00",
@@ -280,27 +280,20 @@ window.TRADE_HISTORY = {
       "fees": 0,
       "realizedProfit": 0,
       "note": "Public-safe trade entry parsed from the trading journal."
+    },
+    {
+      "date": "2026-06-17T15:32:37-04:00",
+      "symbol": "SPRO",
+      "side": "SELL",
+      "quantity": 36,
+      "price": 2.1338,
+      "amount": 76.82,
+      "fees": 0,
+      "realizedProfit": -21.46,
+      "note": "Closed after FDA approval arrived early but the stock sold off instead of repricing."
     }
   ],
   "actions": [
-    {
-      "date": "2026-06-12T12:11:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "12:11 midday check for Agentic account. Account snapshot: Agentic cash account, total value $918.654, equity value $269.784, cash/buying power $648.87, open cost exposure about $273.89 under manual's active $1,000 cap. Open positions: 2..."
-    },
-    {
-      "date": "2026-06-12T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "CATALYST_UPDATE",
-      "description": "AUUD hold/no add. Premarket last about $1.34, bid/ask $1.30/$1.35, previous close $1.37, versus ~$1.33 entry. The June 11 merger-process update remains constructive, but no add premarket; keep existing GTC exit ladder."
-    },
-    {
-      "date": "2026-06-12T15:31:00-04:00",
-      "symbol": "SUNE",
-      "type": "CATALYST_UPDATE",
-      "description": "Existing position check: SUNE hold/no add around $2.56 with a $2.53/$2.57 quote, still near prior close and above the merger-thesis range with principal plus 3x tier harvested. AUUD hold/no add around $1.34 with a $1.34/$1.35 quote and n..."
-    },
     {
       "date": "2026-06-12T15:31:00-04:00",
       "symbol": "AUUD",
@@ -332,6 +325,12 @@ window.TRADE_HISTORY = {
       "description": "AUUD hold/no add. Quote around $1.38, bid/ask $1.38/$1.39, previous close $1.32, versus about $1.3299 entry. The June 11 SEC-comment/amended-S-4/July-closing update remains constructive. Existing GTC ladder stays open; no add because the..."
     },
     {
+      "date": "2026-06-15T15:31:00-04:00",
+      "symbol": "XOS",
+      "type": "POSITION_CLOSED",
+      "description": "Placement decision: XOS closed under the written sell/review condition after clean review. No new buys, adds, or approval-needed orders. manual should be notified because an autonomous exit was placed and filled."
+    },
+    {
       "date": "2026-06-16T15:31:00-04:00",
       "symbol": "AUUD",
       "type": "GTC_LIMIT_PLACED",
@@ -354,6 +353,18 @@ window.TRADE_HISTORY = {
       "symbol": "AUUD",
       "type": "GTC_LIMIT_PLACED",
       "description": "AUUD hold/no add. Quote at review: last about $1.355, bid/ask $1.35/$1.37, previous close $1.38, versus about $1.33 entry. The financing/S-4/Thramann-McCarthy Finney merger-process thesis has no fresh adverse update in the scheduled chec..."
+    },
+    {
+      "date": "2026-06-17T15:31:00-04:00",
+      "symbol": "SPRO",
+      "type": "POSITION_CLOSED",
+      "description": "Placement decision: closed SPRO only. No new late-day buy, add, or approval-needed item."
+    },
+    {
+      "date": "2026-06-17T15:32:00-04:00",
+      "symbol": "SPRO",
+      "type": "POSITION_CLOSED",
+      "description": "- SPRO closed. StockTitan surfaced Spero/GSK's Utebzi approval ahead of the June 18 PDUFA, resolving the binary event favorably, but the stock was trading around $2.135 with a tight $2.13/$2.14 quote versus $2.77 prior close and $2.7299..."
     }
   ],
   "openOrders": [
