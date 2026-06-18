@@ -268,7 +268,7 @@ window.TRADE_HISTORY = {
       "amount": -24.12,
       "fees": 0,
       "realizedProfit": 0,
-      "note": "Public-safe trade entry parsed from the trading journal."
+      "note": "Autonomous buy after Navy contract-vehicle catalyst."
     },
     {
       "date": "2026-06-15T12:12:03-04:00",
@@ -301,7 +301,7 @@ window.TRADE_HISTORY = {
       "amount": -23.94,
       "fees": 0,
       "realizedProfit": 0,
-      "note": "Public-safe trade entry parsed from the trading journal."
+      "note": "Autonomous buy after Smart PCC battery thermal-management patent catalyst."
     },
     {
       "date": "2026-06-17T15:32:37-04:00",

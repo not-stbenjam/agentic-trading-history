@@ -8,6 +8,7 @@ REPO = Path(__file__).resolve().parents[1]
 WORKSPACE = REPO.parent
 STATE_PATH = WORKSPACE / "trading" / "agentic-state.json"
 JOURNAL_PATH = WORKSPACE / "trading" / "journal.md"
+TRADE_LOG_PATH = WORKSPACE / "trading" / "public-trades.json"
 OUT_PATH = REPO / "assets" / "trades.js"
 
 PRIVATE_PATTERNS = [
@@ -81,10 +82,9 @@ def parse_amount(text):
 def parse_journal():
     text = JOURNAL_PATH.read_text()
     current_date = None
-    trades = []
+    trades = load_structured_trades()
     actions = []
     snapshots = []
-    avg_cost = {}
 
     for raw_line in text.splitlines():
         line = raw_line.strip()
@@ -131,97 +131,6 @@ def parse_journal():
                 "exposure": parse_amount(eod.group(4)),
             })
 
-        buy = re.search(
-            r"buy\s+(\d+)\s+shares\s+([A-Z]+).*?filled\s+\d+\s+shares\s+at\s+(?:average\s+)?\$([0-9]+(?:\.[0-9]+)?)\s+at\s+([0-9:]+)\s+ET,\s+total\s+(?:about\s+)?\$([0-9]+(?:\.[0-9]+)?)",
-            line,
-        )
-        if buy and current_date:
-            qty = int(buy.group(1))
-            symbol = buy.group(2)
-            trade_price = float(buy.group(3))
-            total = float(buy.group(5))
-            avg_cost[symbol] = trade_price
-            trades.append({
-                "date": iso_for(current_date, buy.group(4)),
-                "symbol": symbol,
-                "side": "BUY",
-                "quantity": qty,
-                "price": trade_price,
-                "amount": -round(total, 2),
-                "fees": 0,
-                "realizedProfit": 0,
-                "note": buy_note(symbol),
-            })
-
-        sell = re.search(r"-?\s*([0-9:]+)\s+([A-Z]+).*?filled:\s+sold\s+(\d+)\s+shares\s+at\s+\$([0-9]+(?:\.[0-9]+)?),\s+proceeds\s+\$([0-9]+(?:\.[0-9]+)?)", line)
-        if sell and current_date:
-            symbol = sell.group(2)
-            qty = int(sell.group(3))
-            trade_price = float(sell.group(4))
-            proceeds = float(sell.group(5))
-            basis = avg_cost.get(symbol, trade_price)
-            trades.append({
-                "date": iso_for(current_date, sell.group(1)),
-                "symbol": symbol,
-                "side": "SELL",
-                "quantity": qty,
-                "price": trade_price,
-                "amount": round(proceeds, 2),
-                "fees": 0,
-                "realizedProfit": round((trade_price - basis) * qty, 2),
-                "note": "Reducing sale from the exit ladder.",
-            })
-
-        closed_sell = re.search(
-            r"\b([A-Z]+)\s+closed\b.*?filled\s+(\d+)\s+shares\s+at\s+(?:average\s+)?\$([0-9]+(?:\.[0-9]+)?)\s+at\s+([0-9:]+)\s+ET\.\s+Proceeds\s+(?:about\s+)?\$([0-9]+(?:\.[0-9]+)?).*?realized\s+(gain|loss)\s+about\s+\$([0-9]+(?:\.[0-9]+)?)",
-            line,
-            re.I,
-        )
-        if closed_sell and current_date:
-            symbol = closed_sell.group(1)
-            qty = int(closed_sell.group(2))
-            trade_price = float(closed_sell.group(3))
-            proceeds = float(closed_sell.group(5))
-            realized = float(closed_sell.group(7))
-            if closed_sell.group(6).lower() == "loss":
-                realized = -realized
-            trades.append({
-                "date": iso_for(current_date, closed_sell.group(4)),
-                "symbol": symbol,
-                "side": "SELL",
-                "quantity": qty,
-                "price": trade_price,
-                "amount": round(proceeds, 2),
-                "fees": 0,
-                "realizedProfit": round(realized, 2),
-                "note": closed_sell_note(symbol),
-            })
-
-        executed_sell = re.search(
-            r"\b([A-Z]+)\s+(?:thesis\s+exit\s+executed|mechanical\s+exit\s+executed)\b.*?filled\s+(\d+)\s+shares\s+at\s+(?:average\s+)?\$([0-9]+(?:\.[0-9]+)?)\s+at\s+([0-9:]+)\s+ET,\s+proceeds\s+(?:about\s+)?\$([0-9]+(?:\.[0-9]+)?).*?Realized\s+(gain|loss)\s+about\s+\$([0-9]+(?:\.[0-9]+)?)",
-            line,
-            re.I,
-        )
-        if executed_sell and current_date:
-            symbol = executed_sell.group(1)
-            qty = int(executed_sell.group(2))
-            trade_price = float(executed_sell.group(3))
-            proceeds = float(executed_sell.group(5))
-            realized = float(executed_sell.group(7))
-            if executed_sell.group(6).lower() == "loss":
-                realized = -realized
-            trades.append({
-                "date": iso_for(current_date, executed_sell.group(4)),
-                "symbol": symbol,
-                "side": "SELL",
-                "quantity": qty,
-                "price": trade_price,
-                "amount": round(proceeds, 2),
-                "fees": 0,
-                "realizedProfit": round(realized, 2),
-                "note": closed_sell_note(symbol),
-            })
-
         closed_action = re.search(r"\b[A-Z]+\s+(?:closed|thesis\s+exit\s+executed|mechanical\s+exit\s+executed)\b|Placement decision:\s+(?:closed|[A-Z]+\s+closed|[A-Z]+\s+sold)\b", line)
         if current_date and (closed_action or any(marker in line for marker in ["GTC", "exit ladder", "authorized increasing", "merger-process update"])):
             if "order `" in line or "ref_id" in line:
@@ -250,6 +159,28 @@ def parse_journal():
     return trades, actions[-12:], snapshots
 
 
+def load_structured_trades():
+    if not TRADE_LOG_PATH.exists():
+        raise SystemExit(f"Missing structured trade log: {TRADE_LOG_PATH}")
+    data = load_json(TRADE_LOG_PATH)
+    trades = data.get("trades")
+    if not isinstance(trades, list):
+        raise SystemExit(f"Invalid structured trade log: expected trades array in {TRADE_LOG_PATH}")
+    required = {"date", "symbol", "side", "quantity", "price", "amount", "realizedProfit"}
+    normalized = []
+    for index, trade in enumerate(trades):
+        missing = required - trade.keys()
+        if missing:
+            raise SystemExit(f"Invalid structured trade #{index}: missing {sorted(missing)}")
+        item = dict(trade)
+        item["symbol"] = str(item["symbol"]).upper()
+        item["side"] = str(item["side"]).upper()
+        if item["side"] not in {"BUY", "SELL"}:
+            raise SystemExit(f"Invalid structured trade #{index}: side must be BUY or SELL")
+        normalized.append(item)
+    return sorted(normalized, key=lambda item: item["date"])
+
+
 def add_performance_fields(snapshots):
     if not snapshots:
         return snapshots
@@ -273,27 +204,6 @@ def add_performance_fields(snapshots):
         enriched.append(item)
 
     return enriched
-
-
-def buy_note(symbol):
-    notes = {
-        "SUNE": "Opening scout after Suniva reverse-merger catalyst and tight high-volume tape.",
-        "AUUD": "Manually approved buy after clean review; AI-infra merger and financing thesis.",
-        "ZENA": "Manually requested buy after Russell 3000 inclusion catalyst.",
-        "XOS": "Autonomous buy after $3M Xos Hub follow-on order catalyst.",
-        "VRA": "Autonomous buy after earnings beat and tight cooled opening range.",
-        "SPRO": "Autonomous buy ahead of the FDA PDUFA binary event.",
-    }
-    return notes.get(symbol, "Public-safe trade entry parsed from the trading journal.")
-
-
-def closed_sell_note(symbol):
-    notes = {
-        "SPRO": "Closed after FDA approval arrived early but the stock sold off instead of repricing.",
-        "CTM": "Closed after the catalyst follow-through failed.",
-        "XOS": "Closed after the order-news bid weakened and liquidity quality worsened.",
-    }
-    return notes.get(symbol, "Closed after the written trade thesis broke or failed to continue.")
 
 
 def action_type(text):
