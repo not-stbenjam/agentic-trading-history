@@ -1,7 +1,7 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-22T15:31:00-04:00",
+  "asOf": "2026-06-23T15:31:00-04:00",
   "cash": 738.1,
-  "accountValue": 893.3,
+  "accountValue": 893.64,
   "exposureCost": 151.67,
   "realizedProfit": -8.87,
   "snapshots": [
@@ -125,11 +125,11 @@ window.TRADE_HISTORY = {
       "quantity": 2,
       "averageCost": 2.68,
       "costBasis": 5.36,
-      "lastPrice": 2.685,
+      "lastPrice": 2.74,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 22 15:31 end-of-day check hold/no add. Quote about $2.685, bid/ask $2.68/$2.73 versus $2.68 entry and $2.55 prior close. Principal plus 3x tier already harvested; keep 1-share $13.40 GTC sell and 1 loose runner. No add because the original merger spike is spent."
+      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $2.74, bid/ask $2.72/$2.74 versus $2.68 entry and $2.61 prior close. Principal plus 3x tier already harvested; keep 1-share $13.40 GTC sell and 1 loose runner. No add because the original merger spike is spent and there is no fresh milestone."
     },
     {
       "symbol": "AUUD",
@@ -137,11 +137,11 @@ window.TRADE_HISTORY = {
       "quantity": 37,
       "averageCost": 1.33,
       "costBasis": 49.21,
-      "lastPrice": 1.385,
+      "lastPrice": 1.305,
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 22 15:31 end-of-day check hold/no add. Quote about $1.385, bid/ask $1.38/$1.41 versus about $1.33 entry and $1.38 prior close. Existing merger-process thesis and GTC ladder remain intact; no sell trigger and no add without a new merger milestone."
+      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $1.305, bid/ask $1.30/$1.32 versus about $1.33 entry and $1.38 prior close. Existing merger-process thesis and GTC ladder remain intact; no add without a fresh merger milestone."
     },
     {
       "symbol": "ZENA",
@@ -149,11 +149,11 @@ window.TRADE_HISTORY = {
       "quantity": 34,
       "averageCost": 1.4559,
       "costBasis": 49.5,
-      "lastPrice": 1.375,
+      "lastPrice": 1.49,
       "realizedProfit": 0,
       "thesis": "Russell 3000 inclusion effective June 29, listed common-stock structure, tight quote, and possible drone/AI retail attention if index-inclusion flow builds.",
       "invalidation": "Review or sell if volume stays ordinary, the Russell addition fails to attract momentum, spread/liquidity deteriorate, or the move turns into low-quality promotion.",
-      "plan": "June 22 15:31 end-of-day check hold/no add. Quote about $1.375, bid/ask $1.37/$1.38 versus $1.4559 entry and $1.42 prior close. June 29 Russell catalyst remains live, but no add while below entry and no averaging down."
+      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $1.49, bid/ask $1.48/$1.49 versus $1.4559 entry and $1.36 prior close. June 29 Russell catalyst remains live and price is still above entry, but no add because existing Russell exposure is already in place and there is no fresh second catalyst."
     },
     {
       "symbol": "VRA",
@@ -161,11 +161,11 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.735,
+      "lastPrice": 3.83,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 22 15:31 end-of-day check hold/no add. Quote about $3.735, bid/ask $3.72/$3.74 versus $3.3799 entry and $3.90 prior close. Earnings-surprise thesis remains intact, but price is below the about $4.39 +30% turnaround ladder and there is no new catalyst for an add."
+      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $3.83, bid/ask $3.83/$3.85 versus $3.3799 entry and $3.72 prior close. Earnings-surprise thesis remains intact, but the move has not reached the about $4.39 +30% ladder and there is no second catalyst for an add."
     },
     {
       "symbol": "BEEM",
@@ -173,11 +173,11 @@ window.TRADE_HISTORY = {
       "quantity": 18,
       "averageCost": 1.3299,
       "costBasis": 23.94,
-      "lastPrice": 1.425,
+      "lastPrice": 1.35,
       "realizedProfit": 0,
       "thesis": "Beam Global is a Nasdaq-listed common-stock clean-energy/storage microcap with a fresh June 16 European Smart PCC battery-thermal-management patent, very heavy opening liquidity, and a pullback below the planned premarket entry area rather than a vertical pay-up.",
       "invalidation": "Sell/review if the post-open base fails below $1.25, volume fades back toward normal, spread/liquidity deteriorates, or the tape treats the patent as a one-and-done IP press release with no defense/drone/energy-storage follow-through.",
-      "plan": "June 22 15:31 end-of-day check hold/no add. Quote about $1.425, bid/ask $1.42/$1.43 versus $1.3299 fill and $1.37 prior close. Patent/IP scout strengthened into the close and remains above the $1.25 written opening-base invalidation; no add without a hard-dollar second milestone."
+      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $1.35, bid/ask $1.34/$1.35 versus $1.3299 fill and $1.39 prior close. Patent/IP scout remains above entry and above the $1.25 written invalidation, but no add without a hard-dollar second milestone."
     }
   ],
   "trades": [
