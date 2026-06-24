@@ -1,9 +1,9 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-23T15:31:00-04:00",
-  "cash": 738.1,
-  "accountValue": 893.64,
-  "exposureCost": 151.67,
-  "realizedProfit": -8.87,
+  "asOf": "2026-06-24T15:32:54-04:00",
+  "cash": 738.31,
+  "accountValue": 884.14,
+  "exposureCost": 148.95,
+  "realizedProfit": -11.38,
   "snapshots": [
     {
       "date": "2026-06-08T09:30:00-04:00",
@@ -125,11 +125,11 @@ window.TRADE_HISTORY = {
       "quantity": 2,
       "averageCost": 2.68,
       "costBasis": 5.36,
-      "lastPrice": 2.74,
+      "lastPrice": 2.625,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $2.74, bid/ask $2.72/$2.74 versus $2.68 entry and $2.61 prior close. Principal plus 3x tier already harvested; keep 1-share $13.40 GTC sell and 1 loose runner. No add because the original merger spike is spent and there is no fresh milestone."
+      "plan": "June 24 15:31 EOD check hold/no add. Last about $2.625, bid/ask $2.59/$2.67 versus $2.68 entry and $2.74 prior close. Principal plus 3x tier already harvested; keep 1-share $13.40 GTC sell and 1 loose runner. No add because the original merger spike is spent."
     },
     {
       "symbol": "AUUD",
@@ -137,11 +137,11 @@ window.TRADE_HISTORY = {
       "quantity": 37,
       "averageCost": 1.33,
       "costBasis": 49.21,
-      "lastPrice": 1.305,
+      "lastPrice": 1.2667,
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $1.305, bid/ask $1.30/$1.32 versus about $1.33 entry and $1.38 prior close. Existing merger-process thesis and GTC ladder remain intact; no add without a fresh merger milestone."
+      "plan": "June 24 15:31 EOD check hold/no add. Last about $1.2667, bid/ask $1.26/$1.27 versus about $1.33 entry and $1.31 prior close. Existing merger-process thesis and GTC ladder remain intact; no add without a fresh merger milestone."
     },
     {
       "symbol": "ZENA",
@@ -149,11 +149,11 @@ window.TRADE_HISTORY = {
       "quantity": 34,
       "averageCost": 1.4559,
       "costBasis": 49.5,
-      "lastPrice": 1.49,
+      "lastPrice": 1.4199,
       "realizedProfit": 0,
       "thesis": "Russell 3000 inclusion effective June 29, listed common-stock structure, tight quote, and possible drone/AI retail attention if index-inclusion flow builds.",
       "invalidation": "Review or sell if volume stays ordinary, the Russell addition fails to attract momentum, spread/liquidity deteriorate, or the move turns into low-quality promotion.",
-      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $1.49, bid/ask $1.48/$1.49 versus $1.4559 entry and $1.36 prior close. June 29 Russell catalyst remains live and price is still above entry, but no add because existing Russell exposure is already in place and there is no fresh second catalyst."
+      "plan": "June 24 15:31 EOD check hold/no add. Last about $1.4199, bid/ask $1.41/$1.42 versus $1.4559 entry and $1.47 prior close. June 29 Russell catalyst remains live, but no add because existing Russell exposure is already in place and there is no fresh second catalyst."
     },
     {
       "symbol": "VRA",
@@ -161,23 +161,23 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.83,
+      "lastPrice": 3.82,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $3.83, bid/ask $3.83/$3.85 versus $3.3799 entry and $3.72 prior close. Earnings-surprise thesis remains intact, but the move has not reached the about $4.39 +30% ladder and there is no second catalyst for an add."
+      "plan": "June 24 15:31 EOD check hold/no add. Last about $3.82, bid/ask $3.81/$3.84 versus $3.3799 entry and $3.84 prior close. Earnings-surprise thesis remains intact, still below the about $4.39 +30% turnaround profit zone, and there is no second catalyst for an add."
     },
     {
-      "symbol": "BEEM",
-      "company": "BEEM",
-      "quantity": 18,
-      "averageCost": 1.3299,
-      "costBasis": 23.94,
-      "lastPrice": 1.35,
+      "symbol": "GPUS",
+      "company": "GPUS",
+      "quantity": 101,
+      "averageCost": 0.2101,
+      "costBasis": 21.22,
+      "lastPrice": 0.1851,
       "realizedProfit": 0,
-      "thesis": "Beam Global is a Nasdaq-listed common-stock clean-energy/storage microcap with a fresh June 16 European Smart PCC battery-thermal-management patent, very heavy opening liquidity, and a pullback below the planned premarket entry area rather than a vertical pay-up.",
-      "invalidation": "Sell/review if the post-open base fails below $1.25, volume fades back toward normal, spread/liquidity deteriorates, or the tape treats the patent as a one-and-done IP press release with no defense/drone/energy-storage follow-through.",
-      "plan": "June 23 15:31 end-of-day check hold/no add. Last about $1.35, bid/ask $1.34/$1.35 versus $1.3299 fill and $1.39 prior close. Patent/IP scout remains above entry and above the $1.25 written invalidation, but no add without a hard-dollar second milestone."
+      "thesis": "Hyperscale Data signed a first Master Services Agreement for 20 MW of Michigan AI compute capacity, expected by the company to be worth more than $1.2B over the maximum term, with options that could raise total contract value above $3.0B. The entry is a tiny early-underreaction scout because the stock sold off below the prior close instead of spiking after the definitive MSA, while a same-day company call and Q4 2026 deployment target leave possible second-catalyst details.",
+      "invalidation": "Sell/review if GPUS closes below $0.19, the June 24 call fails to support the signed-MSA/deployment thesis, the $100M-$120M retrofit capex or active shelf/ATM dilution becomes the dominant market reaction, bid/ask liquidity becomes irrational, or there is no measurable progress by the June 30 time-stop.",
+      "plan": "June 24 15:31 EOD check: GPUS broke the $0.19 written invalidation before the after-hours company call. Reviewed and sold the only 14 shares available for sale at $0.1850, clean order_checks, order [private id] filled. Remaining 101 shares are held by existing GTC ladder sell orders at $0.4202/$0.6303/$1.05; closing the rest requires fresh approval to cancel those orders under the standing mandate."
     }
   ],
   "trades": [
@@ -323,45 +323,42 @@ window.TRADE_HISTORY = {
       "fees": 0,
       "realizedProfit": -21.46,
       "note": "Closed after FDA approval arrived early but the stock sold off instead of repricing."
+    },
+    {
+      "date": "2026-06-24T12:12:50-04:00",
+      "symbol": "GPUS",
+      "side": "BUY",
+      "quantity": 115,
+      "price": 0.2101,
+      "amount": -24.16,
+      "fees": 0,
+      "realizedProfit": 0,
+      "note": "Autonomous whole-share scout after signed 20 MW Michigan AI compute MSA under early-underreaction setup."
+    },
+    {
+      "date": "2026-06-24T15:32:17-04:00",
+      "symbol": "GPUS",
+      "side": "SELL",
+      "quantity": 14,
+      "price": 0.185,
+      "amount": 2.59,
+      "fees": 0,
+      "realizedProfit": -0.35,
+      "note": "Partial autonomous sell after GPUS broke the $0.19 written invalidation; only shares not held by existing GTC sell orders were available."
+    },
+    {
+      "date": "2026-06-24T15:32:17-04:00",
+      "symbol": "BEEM",
+      "side": "SELL",
+      "quantity": 18,
+      "price": 1.2101,
+      "amount": 21.78,
+      "fees": 0,
+      "realizedProfit": -2.16,
+      "note": "Closed after BEEM failed the $1.25 written invalidation for the patent/IP scout."
     }
   ],
   "actions": [
-    {
-      "date": "2026-06-15T15:31:00-04:00",
-      "symbol": "CTM",
-      "type": "POSITION_CLOSED",
-      "description": "Placement decision: CTM sold under the written loss rule after clean review. No new buys, adds, or approval-needed orders. manual should be notified because an autonomous exit was placed and filled."
-    },
-    {
-      "date": "2026-06-15T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "AUUD hold/no add. Quote around $1.38, bid/ask $1.38/$1.39, previous close $1.32, versus about $1.3299 entry. The June 11 SEC-comment/amended-S-4/July-closing update remains constructive. Existing GTC ladder stays open; no add because the..."
-    },
-    {
-      "date": "2026-06-15T15:31:00-04:00",
-      "symbol": "XOS",
-      "type": "POSITION_CLOSED",
-      "description": "Placement decision: XOS closed under the written sell/review condition after clean review. No new buys, adds, or approval-needed orders. manual should be notified because an autonomous exit was placed and filled."
-    },
-    {
-      "date": "2026-06-15T15:32:00-04:00",
-      "symbol": "XOS",
-      "type": "POSITION_CLOSED",
-      "description": "- XOS thesis exit executed. Quote at review: last about $3.38, displayed bid/ask about $3.30/$3.44, versus $3.9899 fill and $3.50 prior close. The $3M Xos Hub follow-on order catalyst remained real, but the order-news bid stayed weak int..."
-    },
-    {
-      "date": "2026-06-16T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "AUUD hold/no add. Quote at review: last about $1.3411, bid/ask $1.34/$1.35, previous close $1.38, versus about $1.33 entry. The financing/S-4/Thramann-McCarthy Finney thesis has no fresh adverse update, and the existing GTC sell ladder r..."
-    },
-    {
-      "date": "2026-06-16T15:31:00-04:00",
-      "symbol": "AUUD",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "AUUD hold/no add. Quote at review: last about $1.3698, bid/ask $1.36/$1.37, previous close $1.38, versus about $1.33 entry. The financing/S-4/Thramann-McCarthy Finney thesis has no fresh adverse update, and the existing GTC sell ladder r..."
-    },
     {
       "date": "2026-06-17T12:11:00-04:00",
       "symbol": "SUNE",
@@ -397,6 +394,42 @@ window.TRADE_HISTORY = {
       "symbol": "AUUD",
       "type": "GTC_LIMIT_PLACED",
       "description": "AUUD hold/no add. Quote at review: last about $1.34, bid/ask $1.33/$1.35, previous close $1.34, versus about $1.33 entry. The financing/S-4/Thramann-McCarthy Finney merger-process thesis has no fresh adverse update in the scheduled check..."
+    },
+    {
+      "date": "2026-06-24T12:11:00-04:00",
+      "symbol": "SUNE",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "12:11 midday check for Agentic account. Robinhood refresh after the GPUS fill: Agentic cash account, total value about $890.71, equity value about $176.77, cash/buying power $713.94, and open moonshot cost exposure about $175.83 under ma..."
+    },
+    {
+      "date": "2026-06-24T12:12:00-04:00",
+      "symbol": "PORTFOLIO",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "- GPUS order/review/fill: Robinhood lists GPUS as active/tradeable U.S. common stock with fractional buys position-closing-only, so whole-share sizing was required. Reviewed buy 115 GPUS limit $0.2160 with no `order_checks` alerts; place..."
+    },
+    {
+      "date": "2026-06-24T15:31:00-04:00",
+      "symbol": "PORTFOLIO",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "Placement decision: bought GPUS only and placed its GTC profit ladder. No sells, adds to existing positions, or approval-needed orders. `trading/public-trades.json` was updated with the exact GPUS filled buy record."
+    },
+    {
+      "date": "2026-06-24T15:31:00-04:00",
+      "symbol": "BEEM",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "Placement decision: sold BEEM fully and sold the available 14-share GPUS runner. No buy, no add, and no further sell could be placed without approval because GPUS's remaining shares are locked by open GTC sell orders. Notify manual becau..."
+    },
+    {
+      "date": "2026-06-24T15:32:00-04:00",
+      "symbol": "BEEM",
+      "type": "POSITION_CLOSED",
+      "description": "- BEEM closed. The patent/IP scout failed the written $1.25 base invalidation: quote around $1.22 with a $1.21/$1.22 market versus $1.3299 entry. Reviewed sell 18 BEEM limit $1.20 with clean `order_checks`; order `[private id]` filled 18..."
+    },
+    {
+      "date": "2026-06-24T15:32:00-04:00",
+      "symbol": "PORTFOLIO",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "- GPUS partially reduced; approval needed to finish. The new GPUS MSA scout broke the written $0.19 invalidation before the after-hours company call: quote about $0.1851 with a $0.1850/$0.1851 market versus $0.2101 entry and $0.2557 prio..."
     }
   ],
   "openOrders": [
