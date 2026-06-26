@@ -1,7 +1,7 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-25T15:33:45-04:00",
+  "asOf": "2026-06-26T15:31:00-04:00",
   "cash": 736.31,
-  "accountValue": 881.38,
+  "accountValue": 885.29,
   "exposureCost": 148.95,
   "realizedProfit": -13.38,
   "snapshots": [
@@ -125,11 +125,11 @@ window.TRADE_HISTORY = {
       "quantity": 2,
       "averageCost": 2.68,
       "costBasis": 5.36,
-      "lastPrice": 2.49,
+      "lastPrice": 2.5,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 25 15:31 EOD check hold/no add. Last about $2.49, bid/ask $2.42/$2.50 versus $2.68 entry and $2.55 prior close. Principal plus 3x tier already harvested; keep 1-share $13.40 GTC sell and 1 loose runner. No add because the original merger spike is spent and there is no fresh milestone."
+      "plan": "June 26 15:31 EOD check hold/no add. Last about $2.50, bid/ask $2.45/$2.50 versus $2.68 entry and $2.54 prior close. Principal plus 3x tier already harvested; keep 1-share $13.40 GTC sell and 1 loose runner. No add because the original merger spike is spent and there is no fresh milestone."
     },
     {
       "symbol": "AUUD",
@@ -137,11 +137,11 @@ window.TRADE_HISTORY = {
       "quantity": 37,
       "averageCost": 1.33,
       "costBasis": 49.21,
-      "lastPrice": 1.255,
+      "lastPrice": 1.275,
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 25 15:31 EOD check hold/no add. Last about $1.255, bid/ask $1.25/$1.26 versus about $1.33 entry and $1.29 prior close. Existing merger-process thesis and GTC ladder remain intact; no add without a fresh merger milestone."
+      "plan": "June 26 15:31 EOD check hold/no add. Last about $1.275, bid/ask $1.27/$1.28 versus about $1.33 entry and $1.26 prior close. Existing merger-process thesis and GTC ladder remain intact; no add without a fresh merger milestone."
     },
     {
       "symbol": "ZENA",
@@ -149,11 +149,11 @@ window.TRADE_HISTORY = {
       "quantity": 34,
       "averageCost": 1.4559,
       "costBasis": 49.5,
-      "lastPrice": 1.395,
+      "lastPrice": 1.525,
       "realizedProfit": 0,
       "thesis": "Russell 3000 inclusion effective June 29, listed common-stock structure, tight quote, and possible drone/AI retail attention if index-inclusion flow builds.",
       "invalidation": "Review or sell if volume stays ordinary, the Russell addition fails to attract momentum, spread/liquidity deteriorate, or the move turns into low-quality promotion.",
-      "plan": "June 25 15:31 EOD check hold/no add. Last about $1.395, bid/ask $1.39/$1.40 versus $1.4559 entry and $1.40 prior close. June 29 Russell catalyst remains live, but no add because existing Russell exposure is already in place and there is no fresh second catalyst."
+      "plan": "June 26 15:31 EOD check hold/no add. Last about $1.525, bid/ask $1.52/$1.53 versus $1.4559 entry and $1.40 prior close. June 29 Russell catalyst remains live and the position is above entry, but the existing ladder remains far above current price and adding another Russell/date-certain ticket would duplicate exposure without a new second catalyst."
     },
     {
       "symbol": "VRA",
@@ -161,11 +161,11 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.86,
+      "lastPrice": 3.915,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 25 15:31 EOD check hold/no add. Last about $3.86, bid/ask $3.85/$3.86 versus $3.3799 entry and $3.86 prior close. Earnings-surprise thesis remains intact, still below the about $4.39 +30% turnaround profit zone, and no second catalyst is present."
+      "plan": "June 26 15:31 EOD check hold/no add. Last about $3.915, bid/ask $3.91/$3.92 versus $3.3799 entry and $3.84 prior close. Earnings-surprise thesis remains intact and price remains above entry, but still below the about $4.39 +30% turnaround profit zone and no second catalyst is present."
     },
     {
       "symbol": "GPUS",
@@ -173,11 +173,11 @@ window.TRADE_HISTORY = {
       "quantity": 101,
       "averageCost": 0.2101,
       "costBasis": 21.22,
-      "lastPrice": 0.1901,
+      "lastPrice": 0.1738,
       "realizedProfit": 0,
       "thesis": "Hyperscale Data signed a first Master Services Agreement for 20 MW of Michigan AI compute capacity, expected by the company to be worth more than $1.2B over the maximum term, with options that could raise total contract value above $3.0B. The entry is a tiny early-underreaction scout because the stock sold off below the prior close instead of spiking after the definitive MSA, while a same-day company call and Q4 2026 deployment target leave possible second-catalyst details.",
       "invalidation": "Sell/review if GPUS closes below $0.19, the June 24 call fails to support the signed-MSA/deployment thesis, the $100M-$120M retrofit capex or active shelf/ATM dilution becomes the dominant market reaction, bid/ask liquidity becomes irrational, or there is no measurable progress by the June 30 time-stop.",
-      "plan": "June 25 15:31 EOD check: last about $0.1901, bid/ask $0.1901/$0.1902 versus $0.2101 entry and $0.1867 prior close. The written invalidation already broke on June 24 and 14 available shares were sold; remaining 101 shares are still held by existing GTC ladder sell orders at $0.4202/$0.6303/$1.05, so closing the rest still requires fresh approval to cancel those orders under the standing mandate. GPUS also issued a same-day cash/restricted-cash/Bitcoin/silver market-cap headline, but crypto-treasury framing is not a clean add catalyst under the mandate. No add."
+      "plan": "June 26 15:31 EOD check hold/no add; approval-needed cleanup unchanged. Last about $0.1738, bid/ask $0.1737/$0.1738 versus $0.2101 entry and $0.1878 prior close. The written invalidation already broke on June 24 and 14 available shares were sold; remaining 101 shares are all held by existing GTC ladder sell orders at $0.4202/$0.6303/$1.05, so cancel-and-close still requires fresh approval under the standing mandate. No add."
     }
   ],
   "trades": [
@@ -382,12 +382,6 @@ window.TRADE_HISTORY = {
   ],
   "actions": [
     {
-      "date": "2026-06-18T08:52:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "08:52 premarket scout for Agentic account. Account snapshot: Agentic cash account, total value about $889.72, equity value about $151.62, cash/buying power about $738.10, open cost exposure about $151.67 under manual's active $1,000 cap...."
-    },
-    {
       "date": "2026-06-18T15:31:00-04:00",
       "symbol": "AUUD",
       "type": "GTC_LIMIT_PLACED",
@@ -452,6 +446,12 @@ window.TRADE_HISTORY = {
       "symbol": "PORTFOLIO",
       "type": "POSITION_CLOSED",
       "description": "- WYY closed. Quote at sell review: last about $19.80, bid/ask about $19.68/$20.12, versus $21.70 entry and $17.62 prior close. The written invalidation was close below $20.00; the stock had moved through that level into the EOD check an..."
+    },
+    {
+      "date": "2026-06-26T15:31:00-04:00",
+      "symbol": "PORTFOLIO",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "Placement decision: no buy, sell, add, reduce, or approval-needed new order. No `review_equity_order` call was made because no existing available shares hit a clean autonomous sell trigger, GPUS cleanup would require canceling existing G..."
     }
   ],
   "openOrders": [
