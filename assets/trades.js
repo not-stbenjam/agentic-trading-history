@@ -1,9 +1,9 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-30T13:22:45-04:00",
-  "cash": 17.33,
-  "accountValue": 881.6,
-  "exposureCost": 125.05,
-  "realizedProfit": -20.03,
+  "asOf": "2026-06-30T15:34:20-04:00",
+  "cash": 67.65,
+  "accountValue": 882.395,
+  "exposureCost": 75.55,
+  "realizedProfit": -19.21,
   "snapshots": [
     {
       "date": "2026-06-08T09:30:00-04:00",
@@ -125,11 +125,11 @@ window.TRADE_HISTORY = {
       "quantity": 1,
       "averageCost": 2.68,
       "costBasis": 2.68,
-      "lastPrice": 2.28,
+      "lastPrice": 2.4,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 30 13:22 autonomous-profit run hold. Last about $2.28, bid/ask about $2.25/$2.33 versus $2.68 entry and $2.26 prior close. One share remains held by the $13.40 GTC lottery sell; not worth canceling during the cash redeploy pass."
+      "plan": "June 30 15:34 EOD hold. Last about $2.40, bid/ask about $2.33/$2.40 versus $2.68 entry and $2.26 prior close. Only one share remains held by the $13.40 GTC lottery sell; the old reverse-merger move is spent, but the dollar impact is immaterial versus the QQQ position."
     },
     {
       "symbol": "AUUD",
@@ -141,19 +141,7 @@ window.TRADE_HISTORY = {
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 30 13:22 autonomous-profit run hold. Last about $1.305, bid/ask about $1.30/$1.33 versus about $1.33 entry and $1.26 prior close. Existing merger-process thesis and GTC ladder remain intact; position is small and not the best immediate source of redeployable cash."
-    },
-    {
-      "symbol": "ZENA",
-      "company": "ZenaTech",
-      "quantity": 34,
-      "averageCost": 1.4559,
-      "costBasis": 49.5,
-      "lastPrice": 1.49,
-      "realizedProfit": 0,
-      "thesis": "Russell 3000 inclusion effective June 29, listed common-stock structure, tight quote, and possible drone/AI retail attention if index-inclusion flow builds.",
-      "invalidation": "Review or sell if volume stays ordinary, the Russell addition fails to attract momentum, spread/liquidity deteriorate, or the move turns into low-quality promotion.",
-      "plan": "June 30 13:22 autonomous-profit run hold for now. Last about $1.49, bid/ask about $1.49/$1.50 versus $1.4559 entry and $1.55 prior close. Russell effective-open flow is past the June 29 event; re-check at EOD/July 1 expiry for possible cancellation and exit if no renewed edge appears."
+      "plan": "June 30 15:34 EOD hold. Last about $1.305, bid/ask about $1.30/$1.31 versus about $1.33 entry and $1.26 prior close. Existing merger-process thesis and GTC ladder remain intact; no fresh adverse development or better use for the tiny unlocked residual shares."
     },
     {
       "symbol": "VRA",
@@ -161,11 +149,11 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.83,
+      "lastPrice": 3.85,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 30 13:22 autonomous-profit run hold. Last about $3.83, bid/ask about $3.83/$3.85 versus $3.98 prior close and $3.3799 entry. Earnings-surprise thesis remains above entry; keep for now because it is the one legacy position with live positive P/L and no blocking order."
+      "plan": "June 30 15:34 EOD hold. Last about $3.85, bid/ask about $3.84/$3.87 versus $3.98 prior close and $3.3799 entry. Earnings-surprise thesis remains above entry; no sell trigger and no need to disturb the position while QQQ is the main risk sleeve."
     },
     {
       "symbol": "QQQ",
@@ -173,11 +161,11 @@ window.TRADE_HISTORY = {
       "quantity": 1,
       "averageCost": 736.23,
       "costBasis": 736.23,
-      "lastPrice": 736.27,
+      "lastPrice": 737.11,
       "realizedProfit": 0,
       "thesis": "Redeployed idle Agentic cash into a highly liquid Nasdaq-100 ETF after the autonomous mandate expanded. QQQ was up about 1.7% intraday with a penny-to-few-cent spread, giving the account broad liquid tech exposure instead of sitting mostly in cash or stale microcap ladders.",
       "invalidation": "Review/reduce if QQQ loses the 2026-06-30 breakout day, if the broad market rolls over into the close, or if a clearly better cash deployment appears under the autonomous profit mandate.",
-      "plan": "Bought 1 QQQ at $736.23 after clean review_equity_order. Re-check into EOD and on the next regular session; use liquidity to exit quickly if the momentum thesis fails."
+      "plan": "June 30 15:34 EOD hold. Last about $737.11, bid/ask about $737.09/$737.11 versus $736.23 entry and $724.08 prior close. Broad Nasdaq-100 momentum held into the close instead of rolling over, so keep the liquid ETF exposure overnight and review next regular session."
     }
   ],
   "trades": [
@@ -411,15 +399,20 @@ window.TRADE_HISTORY = {
       "fees": 0,
       "realizedProfit": 0,
       "note": "Redeployed idle Agentic cash into liquid Nasdaq-100 ETF after expanded autonomous profit mandate."
+    },
+    {
+      "date": "2026-06-30T15:33:49-04:00",
+      "symbol": "ZENA",
+      "side": "SELL",
+      "quantity": 34,
+      "price": 1.4801,
+      "amount": 50.32,
+      "fees": 0,
+      "realizedProfit": 0.82,
+      "note": "Closed after the Russell 3000 inclusion event passed without renewed follow-through; canceled stale GTC ladder first."
     }
   ],
   "actions": [
-    {
-      "date": "2026-06-24T12:12:00-04:00",
-      "symbol": "PORTFOLIO",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "- GPUS order/review/fill: Robinhood lists GPUS as active/tradeable U.S. common stock with fractional buys position-closing-only, so whole-share sizing was required. Reviewed buy 115 GPUS limit $0.2160 with no `order_checks` alerts; place..."
-    },
     {
       "date": "2026-06-24T15:31:00-04:00",
       "symbol": "PORTFOLIO",
@@ -485,6 +478,12 @@ window.TRADE_HISTORY = {
       "symbol": "PORTFOLIO",
       "type": "GTC_LIMIT_PLACED",
       "description": "- GPUS cleanup executed. The position had already broken the written `$0.19` invalidation and June 30 time-stop, and the remaining 101 shares were locked by stale GTC lottery sells. Under the expanded cancellation mandate, canceled the t..."
+    },
+    {
+      "date": "2026-06-30T15:33:00-04:00",
+      "symbol": "ZENA",
+      "type": "POSITION_CLOSED",
+      "description": "- ZENA closed. The Russell 3000 inclusion/reconstitution catalyst is now past the June 29 effective date, volume was below recent averages, and price was drifting below the `$1.55` prior close without a fresh second catalyst. Under the e..."
     }
   ],
   "openOrders": [
