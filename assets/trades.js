@@ -1,9 +1,9 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-29T15:40:00-04:00",
-  "cash": 738.58,
-  "accountValue": 883.9,
-  "exposureCost": 146.27,
-  "realizedProfit": -13.79,
+  "asOf": "2026-06-30T13:22:45-04:00",
+  "cash": 17.33,
+  "accountValue": 881.6,
+  "exposureCost": 125.05,
+  "realizedProfit": -20.03,
   "snapshots": [
     {
       "date": "2026-06-08T09:30:00-04:00",
@@ -107,8 +107,8 @@ window.TRADE_HISTORY = {
     }
   ],
   "policy": {
-    "perTicketCap": 100,
-    "exposureCap": 1000,
+    "perTicketCap": 750,
+    "exposureCap": 900,
     "rules": [
       "Listed common-stock microcap moonshots only.",
       "Prefer pre-catalyst, early underreaction, or second-catalyst setups over spent headline spikes.",
@@ -125,11 +125,11 @@ window.TRADE_HISTORY = {
       "quantity": 1,
       "averageCost": 2.68,
       "costBasis": 2.68,
-      "lastPrice": 2.27,
+      "lastPrice": 2.28,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 29 15:31 EOD check reduced loose runner. Last about $2.27, bid/ask about $2.27/$2.28 versus $2.68 entry and $2.46 prior close. Review for 1-share limit sell at $2.27 had no order_checks; order filled at $2.27 at 15:37:55 ET. Principal plus 3x tier had already been harvested; only the 1-share $13.40 GTC lottery ladder remains. No add because the original merger spike is spent and price action weakened below entry."
+      "plan": "June 30 13:22 autonomous-profit run hold. Last about $2.28, bid/ask about $2.25/$2.33 versus $2.68 entry and $2.26 prior close. One share remains held by the $13.40 GTC lottery sell; not worth canceling during the cash redeploy pass."
     },
     {
       "symbol": "AUUD",
@@ -137,11 +137,11 @@ window.TRADE_HISTORY = {
       "quantity": 37,
       "averageCost": 1.33,
       "costBasis": 49.21,
-      "lastPrice": 1.2599,
+      "lastPrice": 1.305,
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 29 15:31 EOD check hold/no add. Last about $1.26, bid/ask $1.25/$1.26 versus about $1.33 entry and $1.27 prior close. Existing merger-process thesis and GTC ladder remain intact; no sell trigger and no add without a fresh merger milestone."
+      "plan": "June 30 13:22 autonomous-profit run hold. Last about $1.305, bid/ask about $1.30/$1.33 versus about $1.33 entry and $1.26 prior close. Existing merger-process thesis and GTC ladder remain intact; position is small and not the best immediate source of redeployable cash."
     },
     {
       "symbol": "ZENA",
@@ -149,11 +149,11 @@ window.TRADE_HISTORY = {
       "quantity": 34,
       "averageCost": 1.4559,
       "costBasis": 49.5,
-      "lastPrice": 1.55,
+      "lastPrice": 1.49,
       "realizedProfit": 0,
       "thesis": "Russell 3000 inclusion effective June 29, listed common-stock structure, tight quote, and possible drone/AI retail attention if index-inclusion flow builds.",
       "invalidation": "Review or sell if volume stays ordinary, the Russell addition fails to attract momentum, spread/liquidity deteriorate, or the move turns into low-quality promotion.",
-      "plan": "June 29 15:31 EOD check hold/no add. Last about $1.55, bid/ask $1.55/$1.56 versus $1.4559 entry and $1.56 prior close. Russell effective-open flow stayed modest and below ladder prices; existing date-certain exposure is already in place and there is no fresh second catalyst for an add. Date-certain expiry remains event date plus two trading days unless rewritten."
+      "plan": "June 30 13:22 autonomous-profit run hold for now. Last about $1.49, bid/ask about $1.49/$1.50 versus $1.4559 entry and $1.55 prior close. Russell effective-open flow is past the June 29 event; re-check at EOD/July 1 expiry for possible cancellation and exit if no renewed edge appears."
     },
     {
       "symbol": "VRA",
@@ -161,23 +161,23 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.98,
+      "lastPrice": 3.83,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 29 15:31 EOD check hold/no add. Last about $3.98, bid/ask $3.98/$3.99 versus $3.3799 entry and $3.95 prior close. Earnings-surprise thesis remains above entry, but price is still below the about $4.39 +30% turnaround profit zone and there is no second catalyst for an add."
+      "plan": "June 30 13:22 autonomous-profit run hold. Last about $3.83, bid/ask about $3.83/$3.85 versus $3.98 prior close and $3.3799 entry. Earnings-surprise thesis remains above entry; keep for now because it is the one legacy position with live positive P/L and no blocking order."
     },
     {
-      "symbol": "GPUS",
-      "company": "GPUS",
-      "quantity": 101,
-      "averageCost": 0.2101,
-      "costBasis": 21.22,
-      "lastPrice": 0.1572,
+      "symbol": "QQQ",
+      "company": "QQQ",
+      "quantity": 1,
+      "averageCost": 736.23,
+      "costBasis": 736.23,
+      "lastPrice": 736.27,
       "realizedProfit": 0,
-      "thesis": "Hyperscale Data signed a first Master Services Agreement for 20 MW of Michigan AI compute capacity, expected by the company to be worth more than $1.2B over the maximum term, with options that could raise total contract value above $3.0B. The entry is a tiny early-underreaction scout because the stock sold off below the prior close instead of spiking after the definitive MSA, while a same-day company call and Q4 2026 deployment target leave possible second-catalyst details.",
-      "invalidation": "Sell/review if GPUS closes below $0.19, the June 24 call fails to support the signed-MSA/deployment thesis, the $100M-$120M retrofit capex or active shelf/ATM dilution becomes the dominant market reaction, bid/ask liquidity becomes irrational, or there is no measurable progress by the June 30 time-stop.",
-      "plan": "June 29 15:31 EOD check hold/no add; approval-needed cleanup unchanged. Last about $0.1572, bid/ask about $0.1571/$0.1579 versus $0.2101 entry and $0.17 prior close. The written invalidation already broke on June 24 and 14 available shares were sold; remaining 101 shares are all held by existing GTC ladder sell orders at $0.4202/$0.6303/$1.05, so cancel-and-close still requires fresh approval under the standing mandate. No add."
+      "thesis": "Redeployed idle Agentic cash into a highly liquid Nasdaq-100 ETF after the autonomous mandate expanded. QQQ was up about 1.7% intraday with a penny-to-few-cent spread, giving the account broad liquid tech exposure instead of sitting mostly in cash or stale microcap ladders.",
+      "invalidation": "Review/reduce if QQQ loses the 2026-06-30 breakout day, if the broad market rolls over into the close, or if a clearly better cash deployment appears under the autonomous profit mandate.",
+      "plan": "Bought 1 QQQ at $736.23 after clean review_equity_order. Re-check into EOD and on the next regular session; use liquidity to exit quickly if the momentum thesis fails."
     }
   ],
   "trades": [
@@ -389,15 +389,31 @@ window.TRADE_HISTORY = {
       "fees": 0,
       "realizedProfit": -0.41,
       "note": "Reduced loose runner after the Suniva reverse-merger tape weakened below entry; one GTC ladder share remains."
+    },
+    {
+      "date": "2026-06-30T13:21:18-04:00",
+      "symbol": "GPUS",
+      "side": "SELL",
+      "quantity": 101,
+      "price": 0.1485,
+      "amount": 15,
+      "fees": 0.02,
+      "realizedProfit": -6.24,
+      "note": "Closed remaining position after broken invalidation/time-stop; canceled stale GTC ladder first under expanded autonomous mandate."
+    },
+    {
+      "date": "2026-06-30T13:22:23-04:00",
+      "symbol": "QQQ",
+      "side": "BUY",
+      "quantity": 1,
+      "price": 736.23,
+      "amount": -736.23,
+      "fees": 0,
+      "realizedProfit": 0,
+      "note": "Redeployed idle Agentic cash into liquid Nasdaq-100 ETF after expanded autonomous profit mandate."
     }
   ],
   "actions": [
-    {
-      "date": "2026-06-24T12:11:00-04:00",
-      "symbol": "SUNE",
-      "type": "GTC_LIMIT_PLACED",
-      "description": "12:11 midday check for Agentic account. Robinhood refresh after the GPUS fill: Agentic cash account, total value about $890.71, equity value about $176.77, cash/buying power $713.94, and open moonshot cost exposure about $175.83 under ma..."
-    },
     {
       "date": "2026-06-24T12:12:00-04:00",
       "symbol": "PORTFOLIO",
@@ -463,6 +479,12 @@ window.TRADE_HISTORY = {
       "symbol": "SUNE",
       "type": "GTC_LIMIT_PLACED",
       "description": "- SUNE reduced. Quote at review: last about $2.28, bid/ask about $2.26/$2.28, previous close $2.46, versus $2.68 entry. Principal plus 3x tier had already been harvested, but the loose runner weakened below entry and the original Suniva..."
+    },
+    {
+      "date": "2026-06-30T13:21:00-04:00",
+      "symbol": "PORTFOLIO",
+      "type": "GTC_LIMIT_PLACED",
+      "description": "- GPUS cleanup executed. The position had already broken the written `$0.19` invalidation and June 30 time-stop, and the remaining 101 shares were locked by stale GTC lottery sells. Under the expanded cancellation mandate, canceled the t..."
     }
   ],
   "openOrders": [
