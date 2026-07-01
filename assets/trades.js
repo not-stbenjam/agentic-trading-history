@@ -1,7 +1,7 @@
 window.TRADE_HISTORY = {
-  "asOf": "2026-06-30T15:34:20-04:00",
+  "asOf": "2026-07-01T12:13:00-04:00",
   "cash": 67.65,
-  "accountValue": 882.395,
+  "accountValue": 876.7229,
   "exposureCost": 75.55,
   "realizedProfit": -19.21,
   "snapshots": [
@@ -125,11 +125,11 @@ window.TRADE_HISTORY = {
       "quantity": 1,
       "averageCost": 2.68,
       "costBasis": 2.68,
-      "lastPrice": 2.4,
+      "lastPrice": 2.4007,
       "realizedProfit": 24.12,
       "thesis": "Tiny Nasdaq-listed solar shell with a definitive Suniva reverse-merger catalyst, exceptional opening liquidity, and a tight regular-hours spread.",
       "invalidation": "Review or sell if the merger-news bid fails, liquidity deteriorates, dilution and ownership math dominate the tape, or price breaks below the merger-thesis range around $2.26.",
-      "plan": "June 30 15:34 EOD hold. Last about $2.40, bid/ask about $2.33/$2.40 versus $2.68 entry and $2.26 prior close. Only one share remains held by the $13.40 GTC lottery sell; the old reverse-merger move is spent, but the dollar impact is immaterial versus the QQQ position."
+      "plan": "July 1 12:11 midday hold/no add. Last about $2.4007, bid/ask about $2.36/$2.42 versus $2.68 entry and $2.36 prior close. Only one share remains held by the $13.40 GTC lottery sell; the old reverse-merger move is spent, but the dollar impact is immaterial and there is no clean sell available without canceling the ladder."
     },
     {
       "symbol": "AUUD",
@@ -137,11 +137,11 @@ window.TRADE_HISTORY = {
       "quantity": 37,
       "averageCost": 1.33,
       "costBasis": 49.21,
-      "lastPrice": 1.305,
+      "lastPrice": 1.345,
       "realizedProfit": 0,
       "thesis": "Tiny Nasdaq-listed AI-infra merger story with completed financing, S-4 process, and planned McCarthy Finney combination.",
       "invalidation": "Review or sell if merger terms imply excessive dilution, the financing/S-4 path breaks, regular-hours volume cannot support the setup, or the move turns into no-news promotion.",
-      "plan": "June 30 15:34 EOD hold. Last about $1.305, bid/ask about $1.30/$1.31 versus about $1.33 entry and $1.26 prior close. Existing merger-process thesis and GTC ladder remain intact; no fresh adverse development or better use for the tiny unlocked residual shares."
+      "plan": "July 1 12:11 midday hold/no add. Last about $1.345, bid/ask about $1.34/$1.35 versus about $1.33 entry and $1.35 prior close. Existing merger-process thesis and GTC ladder remain intact; 33 shares are held for GTC sells and the 4 loose shares do not have a clean sell trigger."
     },
     {
       "symbol": "VRA",
@@ -149,11 +149,11 @@ window.TRADE_HISTORY = {
       "quantity": 7,
       "averageCost": 3.3799,
       "costBasis": 23.66,
-      "lastPrice": 3.85,
+      "lastPrice": 3.95,
       "realizedProfit": 0,
       "thesis": "Earnings-surprise setup with Nasdaq common-stock structure, heavy relative volume, tight regular-hours quote, and a cooled opening range rather than a vertical chase.",
       "invalidation": "Review or sell if the earnings-gap bid fails, spread/liquidity deteriorate, volume dries up, or the setup proves to be only a modest turnaround bounce.",
-      "plan": "June 30 15:34 EOD hold. Last about $3.85, bid/ask about $3.84/$3.87 versus $3.98 prior close and $3.3799 entry. Earnings-surprise thesis remains above entry; no sell trigger and no need to disturb the position while QQQ is the main risk sleeve."
+      "plan": "July 1 12:11 midday hold/no add. Last about $3.95, bid/ask about $3.94/$3.95 versus $3.89 prior close and $3.3799 entry. Earnings-surprise thesis remains above entry; volume remains light, price is below the 52-week high/profit zone, and there is no second catalyst or sell trigger."
     },
     {
       "symbol": "QQQ",
@@ -161,11 +161,11 @@ window.TRADE_HISTORY = {
       "quantity": 1,
       "averageCost": 736.23,
       "costBasis": 736.23,
-      "lastPrice": 737.11,
+      "lastPrice": 729.58,
       "realizedProfit": 0,
       "thesis": "Redeployed idle Agentic cash into a highly liquid Nasdaq-100 ETF after the autonomous mandate expanded. QQQ was up about 1.7% intraday with a penny-to-few-cent spread, giving the account broad liquid tech exposure instead of sitting mostly in cash or stale microcap ladders.",
       "invalidation": "Review/reduce if QQQ loses the 2026-06-30 breakout day, if the broad market rolls over into the close, or if a clearly better cash deployment appears under the autonomous profit mandate.",
-      "plan": "June 30 15:34 EOD hold. Last about $737.11, bid/ask about $737.09/$737.11 versus $736.23 entry and $724.08 prior close. Broad Nasdaq-100 momentum held into the close instead of rolling over, so keep the liquid ETF exposure overnight and review next regular session."
+      "plan": "July 1 12:11 midday hold/review. Last about $729.58, bid/ask about $729.57/$729.60 versus $736.23 entry and $736.40 prior close. QQQ is still below the June 30 breakout day but above the morning low and remains the highest-liquidity exposure; no better microcap setup cleared the entry-discipline screen, so hold and recheck into EOD."
     }
   ],
   "trades": [
